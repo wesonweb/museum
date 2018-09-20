@@ -12,11 +12,11 @@
 		<!-- opening times -->
 		<?php get_template_part('template-parts/opening', 'times'); ?>
 
-				<?php if( get_field('latest_news') ): ?>
+		<?php if( get_field('latest_news') ): ?>
 		<section class="latest-news">
 			<div class="container">
 				<h2>Latest from the museum</h2>
-						<div class="latest-news-image">
+					<div class="latest-news-image">
 						<img class="latest-news-feature-image"
 						<?php ar_responsive_image(get_field( 'latest_news_image' ),'latest-news','640px'); ?>
 								alt="text" />
