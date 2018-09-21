@@ -15,11 +15,7 @@ get_header(); ?>
 		</div>
 			<!-- load Around Chesham images if required -->
 			<?php if( is_page('images-of-chesham')) :
-				get_template_part('template-parts/content', 'chesham-photos');
-
-			else: get_template_part('template-parts/content');
-
-				?>
+				get_template_part('template-parts/content'); ?>
 
 				<?php endif; ?>
 			</div>
