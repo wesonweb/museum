@@ -1,6 +1,6 @@
 <div class="inner-content story-themes">
 
-  <h2>Stories menu</h2>
+  <h2>Menu</h2>
   <ul class="story-list-sidebar" id="jumptop">
   <?php
     // Start the loop.
