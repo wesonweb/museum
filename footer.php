@@ -14,7 +14,7 @@
 	<footer id="colophon" class="site-footer clearfix">
 		<div class="site-info container">
 			<section class="legal-info">
-				<p><?php echo theme_copyright(); ?> Chesham museum | Registered Charity Number: 1172671 | <a href="http://cheshammuseum.org.uk/privacy-policy/" class="footer-link">privacy policy</a></p>
+				<p><?php echo theme_copyright(); ?> Chesham museum | Registered Charity Number: 1172671 | <a href="https://cheshammuseum.org.uk/privacy-policy/" class="footer-link">view our privacy policy</a></p>
 			</section>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
