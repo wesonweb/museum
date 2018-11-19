@@ -1189,7 +1189,7 @@ li.has-children .active a {
 	}
 	.main-navigation ul {
 		display: block;
-		
+
 		display:-webkit-box;
 	    	display:-ms-flexbox;
 	    	display:flex;
@@ -1245,6 +1245,23 @@ li.has-children .active a {
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+
+/* footer menu */
+
+#secondary-menu {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#secondary-menu li a {
+	color: #fff;
+	display: block;
+	margin: 5px 10px;
+
 }
 
 /*--------------------------------------------------------------
