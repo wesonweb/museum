@@ -44,7 +44,6 @@ function vanilla_setup() {
 
 	//add additional image sizes
 	add_image_size( 'sidebar-thumb', 120, 120, true ); // Hard Crop Mode
-	add_image_size( 'chesham-images-thumb', 150, 150, true ); // Hard Crop Mode
 	add_image_size( 'homepage-thumb', 220, 180 ); // Soft Crop Mode
 	add_image_size( 'singlepost-thumb', 590, 9999 ); // Unlimited Height Mode
 	// add html5 shim
@@ -170,7 +169,7 @@ add_action( 'wp_enqueue_scripts', 'cheshammuseum_style' );
 
 
 function load_fonts() {
-					wp_register_style('googleFonts', 	'https://fonts.googleapis.com/css?family=Lora|Merriweather|Merriweather+Sans|Open+Sans');
+					wp_register_style('googleFonts', 	'https://fonts.googleapis.com/css?family=Lora|Merriweather:400,700|Open+Sans:400,600');
 
 					wp_enqueue_style( 'googleFonts');
 			}
@@ -226,16 +225,9 @@ require(get_template_directory().'/function-templates/admin-area.php');
 /**
  * navigation (add arrows to submenu and tidy up nav ids and classes)
  */
-
 require(get_template_directory().'/function-templates/navigation.php');
 
-require_once( get_stylesheet_directory() . '/class-wp-widget-tag-list.php' );
 
-function register_tag_lists_widget() {
-	register_widget( 'WP_Widget_Tag_List' );
-}
-
-add_action( 'widgets_init', 'register_tag_lists_widget' );
 	/*************************************************************************
 Copyright for footer: automatically updates every year
 ************************************************************************/
@@ -269,6 +261,8 @@ function show_posts_nav() {
 global $wp_query;
 return ($wp_query->max_num_pages > 1);
 }
+
+
 
 
 ?>

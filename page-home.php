@@ -79,6 +79,8 @@
 					<a href="<?php echo get_page_link(30); ?>">Find out more</a>
 				</div>
 			</section> -->
+
+
 		<section class="latest-news-container">
 			<div class="latest-news-article container clearfix">
 				<!-- temporary message that museum is closed -->
@@ -108,6 +110,9 @@
 		</section><!-- .news-wrapper-->
 
 		<?php //endwhile; ?>
-		<?php wp_reset_query(); ?>
+
+
+
+
 	</main><!-- .site-main -->
 <?php get_footer(); ?>
