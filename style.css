@@ -958,14 +958,14 @@ footer {
 	background-color: #347b75;
 	background-color: #3b8473; */
 	/* background-color: #4c4c4c; */
-	background-color: #ddd;
+	background-color: #f1f3f1;
 	padding: 20px 0;
 	/* background-color: #2f4f4f; */
 }
 
 .sponsor-details img {
 	display: block;
-	max-width: 300px;
+	max-width: 250px;
 	margin: 20px auto;
 }
 
