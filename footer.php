@@ -11,13 +11,13 @@
 ?>
 	<footer id="colophon" class="site-footer clearfix" role="contentinfo">
 
-		<div class="container">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lottery-logo.png" width="300" alt="lottery-funded-logo">
+		<div class="container sponsor-details">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lottery-logo.png" width="" alt="lottery-funded-logo">
 		</div>
 
 		<div class="site-info">
 			<div class="container">
-				
+
 				<!-- footer menu -->
 				<nav aria-controls="secondary-menu">
 					<?php

@@ -953,13 +953,25 @@ Footer
 ----------------------------------------------------*/
 footer {
 	clear: both;
-	background: #799A81;
+	/* background: #799A81;
 	background: #4d7356;
 	background-color: #347b75;
-	background-color: #3b8473;
-	background-color: #4c4c4c;
+	background-color: #3b8473; */
+	/* background-color: #4c4c4c; */
+	background-color: #ddd;
 	padding: 20px 0;
 	/* background-color: #2f4f4f; */
+}
+
+.sponsor-details img {
+	display: block;
+	max-width: 300px;
+	margin: 20px auto;
+}
+
+.site-info {
+	background-color: #4c4c4c;
+	padding: 20px 0;
 }
 /*footer content*/
 .legal-info {
