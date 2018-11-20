@@ -90,13 +90,8 @@
 				<!-- <h3><span class="latest-news-header">Latest news</span>
 				<span class="view-all"><a href="<?php //echo get_page_link(321); ?>">read all news &rarr;</a></span>
 				</h3> -->
-
-
-
 			</div><!-- end .latest-news-article-->
 		</section><!-- .news-wrapper-->
-
-
 
 		<div class="container sponsor-details">
 			<?php //get_template_part('template-parts/news'); ?>
