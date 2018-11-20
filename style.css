@@ -965,14 +965,46 @@ footer {
 	background-color: #f1f3f1;
 	/* padding: 20px 0; */
 }
-
+.sponsor-details {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
 .sponsor-details img {
 	display: block;
 	max-width: 200px;
-	margin: 20px auto;
+	/* margin: 20px auto; */
 	padding: 20px 0;
+	flex-grow: 2;
 }
 
+@media(min-width: 500px) {
+	.sponsor-details {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+			-webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+	}
+}
 .site-info {
 	background-color: #4c4c4c;
 	padding: 20px 0;
@@ -1528,18 +1560,20 @@ span.latest-news-header {
 	vertical-align: middle;
 }
 .latest-post-meta {
+	/* margin-right: 10px; */
 	display: block;
 }
 span.news-headline {
 	display: block;
-	margin: 10px 0 0;
-	font-size: 1.2rem;
+	margin: 20px 0 0;
+	font-size: 1.5rem;
 }
-span.readmore {
+span.readmore a {
 	display: block;
-	margin-top: 10px;
-	font-size: 1rem;
+	/* margin-top: 10px; */
+	font-size: 1.2rem;
 	color: #1e536b;
+	border-bottom: none;
 }
 /*latest news*/
 .latest-news-container {
@@ -1586,7 +1620,7 @@ span.publish-date {
 	}
 }
 
-@media (min-width: 700px) {
+@media (min-width: 560px) {
 	.latest-news-article img.attachment-news-thumb {
 		display: block;
 		margin: 30px 0;
@@ -1594,18 +1628,20 @@ span.publish-date {
 		vertical-align: middle;
 	}
 	.latest-post-meta {
-		display: block;
+		margin-right: 60px;
+		align-self: center;
+		/* display: block;
 		width: 60%;
-		float: left;
+		float: left; */
 	}
 	span.news-headline {
 		display: block;
-		margin: 20px 0 0 20px;
+		/* margin: 20px 0 0 20px; */
 		font-weight: bold;
 	}
 	span.readmore {
 		display: block;
-		margin-left: 20px;
+		/* margin-left: 20px; */
 		padding-top: 5px;
 		font-size: 1rem;
 		color: #1e536b;
