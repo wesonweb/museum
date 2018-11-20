@@ -291,7 +291,6 @@ textarea {
 	font-family: "Open Sans", Merriweather Sans, sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.5;
 }
 
 body {
@@ -689,11 +688,10 @@ a {
 	-ms-transition: color .3s ease;
 	-o-transition: color .3s ease;
 	transition: color .3s ease;
-	padding-bottom: 3px;
+	padding-bottom: 2px;
 	color: #166083;
-	/* color: #347b75; */
+	border-bottom: 2px solid #166083;
 	text-decoration: none;
-	/* font-weight: bold; */
 }
 a:visited {
 	color: #166083;
@@ -706,6 +704,7 @@ a:active {
 	transition: ease-in .15s;
 	color: #166083;
 	text-decoration: none;
+	border-bottom: 2px dotted #166083;
 }
 a:focus {
 	outline: thin dotted;
@@ -960,13 +959,13 @@ footer {
 	/* background-color: #4c4c4c; */
 	background-color: #f1f3f1;
 	padding: 20px 0;
-	/* background-color: #2f4f4f; */
 }
 
 .sponsor-details img {
 	display: block;
 	max-width: 250px;
 	margin: 20px auto;
+	padding: 20px 0;
 }
 
 .site-info {
@@ -1273,7 +1272,12 @@ li.has-children .active a {
 	color: #fff;
 	display: block;
 	margin: 5px 10px;
+	border-bottom: 1px solid #fff;
 
+}
+
+#secondary-menu li a:hover {
+	border-bottom: 1px dotted #fff;
 }
 
 /*--------------------------------------------------------------
