@@ -11,9 +11,7 @@
 ?>
 	<footer id="colophon" class="site-footer clearfix" role="contentinfo">
 
-		<div class="container sponsor-details">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lottery-logo.png" width="" alt="lottery-funded-logo">
-		</div>
+		
 
 		<div class="site-info">
 			<div class="container">

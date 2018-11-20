@@ -718,6 +718,7 @@ a.footer-link,
 a.footer-link:hover,
 a.footer-link:active {
 	color: #fff;
+	border-bottom: none;
 }
 
 /*--------------------------------------------------------------
@@ -850,8 +851,12 @@ header {
 	/*margin: 0 auto;*/
 }
 
-.logo a {
+.logo a,
+.logo a:hover,
+.chesham-images-container li a,
+.chesham-images-container li a:hover {
 	display: block;
+	border-bottom: none;
 }
 
  .logo img {
@@ -936,7 +941,7 @@ header {
 		text-align: left;
 	}
 	ul.menu li > a {
-		font-size: 1.2rem;
+		font-size: 1.3rem;
 		/*padding: 10px;*/
 	}
 }
@@ -958,12 +963,12 @@ footer {
 	background-color: #3b8473; */
 	/* background-color: #4c4c4c; */
 	background-color: #f1f3f1;
-	padding: 20px 0;
+	/* padding: 20px 0; */
 }
 
 .sponsor-details img {
 	display: block;
-	max-width: 250px;
+	max-width: 200px;
 	margin: 20px auto;
 	padding: 20px 0;
 }
@@ -972,6 +977,7 @@ footer {
 	background-color: #4c4c4c;
 	padding: 20px 0;
 }
+
 /*footer content*/
 .legal-info {
 	text-align: center;
@@ -1261,6 +1267,11 @@ li.has-children .active a {
 
 /* footer menu */
 
+.menu-footer-nav-container {
+	max-width: 52em;
+	margin: auto;
+}
+
 #secondary-menu {
 	display: flex;
 	flex-direction: row;
@@ -1271,8 +1282,9 @@ li.has-children .active a {
 #secondary-menu li a {
 	color: #fff;
 	display: block;
-	margin: 5px 10px;
+	margin: 5px;
 	border-bottom: 1px solid #fff;
+	font-size: 1.1rem;
 
 }
 
@@ -1473,11 +1485,11 @@ li.has-children .active a {
 	}
 }
 /*news article */
-
 .latest-news-article {
 	width: 80%;
 	margin: 35px auto;
 	background: #f9f6ec;
+	background-color: #F1F3F1;
 	padding: 40px;
 	border-bottom: 1px solid rgba(204, 204, 204, 0.74);
 }

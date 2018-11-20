@@ -91,28 +91,17 @@
 				<span class="view-all"><a href="<?php //echo get_page_link(321); ?>">read all news &rarr;</a></span>
 				</h3> -->
 
-					<?php /*$newsarticles = new WP_Query (
-					array (
-					'post_type' => 'news',
-					'posts_per_page' => 1,
-					'order' => 'DESC'
-								)
-									);
-					while ($newsarticles->have_posts() ):
-					$newsarticles->the_post(); */?>
 
-				<?php //the_post_thumbnail('news-thumb'); ?>
-				<!-- <div class="latest-post-meta">
-					<span class="news-headline"><?php //the_title(); ?></span>
-					<span class="readmore"><a href="<?php //the_permalink(); ?>">Read more &rarr;</a></span>
-				</div> -->
+
 			</div><!-- end .latest-news-article-->
 		</section><!-- .news-wrapper-->
 
-		<?php //endwhile; ?>
 
 
-
+		<div class="container sponsor-details">
+			<?php get_template_part('template-parts/news'); ?>
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lottery-logo.png" width="" alt="lottery-funded-logo">
+		</div>
 
 	</main><!-- .site-main -->
 <?php get_footer(); ?>
