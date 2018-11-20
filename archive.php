@@ -22,5 +22,4 @@
 				</div>
 			</div>
 </main>
-<!-- <span class="jumpto"><a href="#jumptop">Back to menu &uarr; </span> -->
 <?php get_footer(); ?>

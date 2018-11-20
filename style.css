@@ -3,18 +3,8 @@ Theme Name: Chesham Museum
 Theme URI: http://localhost/cheshammuseum
 Author: wes
 Author URI: http://wesleymehaffy.co.uk
-Description: starter test theme
+Description: Chesham Museum website theme
 Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: vanilla
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-vanilla theme is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
@@ -1316,8 +1306,7 @@ li.has-children .active a {
 	display: block;
 	margin: 5px;
 	border-bottom: 1px solid #fff;
-	font-size: 1.1rem;
-
+	font-size: 1rem;
 }
 
 #secondary-menu li a:hover {
@@ -2006,6 +1995,7 @@ section.childrens-events * {
 
 .event-container p {
 	color: #3b3b3b;
+	font-size: 1.3rem;
 }
 .event-summary {
 	padding-top: 15px;

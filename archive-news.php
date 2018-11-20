@@ -9,13 +9,8 @@
 						</li>
 						<?php endwhile; ?>
 					</ul>
-
-				<!-- </div> -->
-
-			<?php endif; ?>
-
+					<?php endif; ?>
+				</div>
 			</div>
-		</div>
-</main>
-
+		</main>
 <?php get_footer();

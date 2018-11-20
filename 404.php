@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package vanilla_theme
+ * @package cheshammuseum
  */
 
 get_header(); ?>
@@ -19,7 +19,6 @@ get_header(); ?>
 
 				<div class="page-content">
 					<p><?php esc_html_e( 'It looks like nothing was found at this location. Choose from the links in the menu above to continue your journey.', 'vanilla' ); ?></p>
-
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
