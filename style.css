@@ -3,18 +3,8 @@ Theme Name: Chesham Museum
 Theme URI: http://localhost/cheshammuseum
 Author: wes
 Author URI: http://wesleymehaffy.co.uk
-Description: starter test theme
+Description: Chesham Museum website theme
 Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: vanilla
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-vanilla theme is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
@@ -734,6 +724,7 @@ a.footer-link:active {
 	background: #4d7356;
 	background-color: #347b75;
 	background-color: #3b8473;
+	background-color: #347B75;
 
 	/* background-color: #2f4f4f; */
 	/*border-bottom: 2px solid #E2DC9A;*/
@@ -854,7 +845,8 @@ header {
 .logo a,
 .logo a:hover,
 .chesham-images-container li a,
-.chesham-images-container li a:hover {
+.chesham-images-container li a:hover,
+.tax-list li a, .tax-list li a:hover {
 	display: block;
 	border-bottom: none;
 }
@@ -1316,8 +1308,7 @@ li.has-children .active a {
 	display: block;
 	margin: 5px;
 	border-bottom: 1px solid #fff;
-	font-size: 1.1rem;
-
+	font-size: 1rem;
 }
 
 #secondary-menu li a:hover {
@@ -2006,6 +1997,7 @@ section.childrens-events * {
 
 .event-container p {
 	color: #3b3b3b;
+	font-size: 1.3rem;
 }
 .event-summary {
 	padding-top: 15px;
@@ -2519,6 +2511,7 @@ span.gallery-heading {
 	margin: 0;
 	padding: 10px;
 	background: #4c8273;
+	background-color: #1D506E;
 	color: white;
 }
 
@@ -2537,6 +2530,7 @@ span.gallery-heading {
 }
 .photo-category-list-container {
 	background: #457692;
+	background-color: #1e506d;
 	/* background-color: rgba(0,0,0,.80); */
 	text-align: center;
 	line-height: 1.9;
@@ -2588,17 +2582,16 @@ span.gallery-heading {
 
 
 ul.photo-category-list {
-	/* margin: auto; */
+	max-width: 52em;
+	margin: auto;
 	/* display: inline-block; */
 	text-align: center;
 	text-align: left;
-	padding: 0;
+	padding: 0 0 20px 0;
 	/* background-color: #4c8273; */
 
 	display: -webkit-box;
-
 	display: -ms-flexbox;
-
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
@@ -2608,7 +2601,6 @@ ul.photo-category-list {
 	    flex-wrap: wrap;
 
 	-webkit-box-pack: start;
-
 	    -ms-flex-pack: start;
 
 	        justify-content: center;
@@ -2631,13 +2623,18 @@ ul.photo-category-list li {
 	-ms-flex-item-align: stretch;
 	    -ms-grid-row-align: stretch;
 	    align-self: stretch;
-	-webkit-box-flex: 0;
-	    -ms-flex-positive: 0;
-	        flex-grow: 0;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
 					-ms-flex-preferred-size: 200px;
 							flex-basis: 200px;
+	border-bottom: 2px solid #1b6182;
 
 	/* border-left: 1px solid #fff; */
+}
+
+ul.photo-category-list li:hover {
+	border-bottom: 2px solid white;
 }
 ul.photo-category-list li:last-child {
 		/* border-right: 1px solid #fff; */
@@ -2649,9 +2646,10 @@ ul.photo-category-list li a {
 	/* padding: 10px; */
 	letter-spacing: 1px;
 	font-weight: 400;
-	background-color: #121212;
+	/* background-color: #121212;
 	background-color: #4e758f;
-	background-color: #166083;
+	background-color: #166083; */
+	background-color: #1b6182;
 	/* border-left: 2px solid #fff; */
 }
 
@@ -2692,6 +2690,10 @@ ul.photo-category-list li {
 
 			-ms-flex-preferred-size: 50px;
 					flex-basis: 50px;
+
+					-webkit-box-flex: 0;
+					    -ms-flex-positive: 0;
+					        flex-grow: 0;
 }
 
 ul.chesham-images-container li {
@@ -3006,8 +3008,8 @@ section > a {
 	margin: 15px auto;
 }
 
-.charity-donation-button {
-
+.charity-donation-button a {
+	border-bottom: none;
 }
 .support-us h2,
 .museum-friends h2,
@@ -4009,6 +4011,10 @@ a.rslides_nav:hover {
 
 .metaslider .rslides_tabs li:hover {
 	background: #457696;
+}
+
+.rslides_tabs li a {
+	border-bottom: none;
 }
 .metaslider .caption {
 	/* background-color: #4e7593; */

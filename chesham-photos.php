@@ -1,11 +1,6 @@
 <?php
-
-/*
- Template Name: Full width template
- */
-
+/* Template Name: Full width template */
 get_header(); ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" >
 			<div class="container">
@@ -14,14 +9,8 @@ get_header(); ?>
 					<h1><?php the_title(); ?></h1>
 					<?php the_content(); ?>
 				</article>
-			<?php endwhile; endif; ?>
-
+				<?php endwhile; endif; ?>
 			</div>
-
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php
-
-get_footer();
+<?php get_footer();

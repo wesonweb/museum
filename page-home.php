@@ -36,7 +36,7 @@
 			</section>
 
 			<section class="homepage-asset-container">
-				<a href="<?php echo get_permalink(388); ?>">
+				<a href="<?php echo get_permalink(582); ?>">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aerial-shot.jpg"
 					height="200" alt="map of Chesham museum location">
 					<div class="section-nav">
@@ -58,7 +58,7 @@
 			</section>
 
 			<section class="homepage-asset-container">
-				<a href="<?php echo get_permalink(437); ?>">
+				<a href="<?php echo get_permalink(893); ?>">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/christopher-mulkern-crop.jpg"
 					height="200" alt="photo of an area in Chesham">
 					<div class="section-nav">
@@ -95,7 +95,7 @@
 
 		<div class="container sponsor-details">
 			<?php //get_template_part('template-parts/news'); ?>
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lottery-logo.png" width="" alt="lottery-funded-logo">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lottery-logo.png" width="200" alt="lottery-funded-logo">
 		</div>
 
 	</main><!-- .site-main -->
