@@ -2651,23 +2651,37 @@ ul.photo-category-list li a {
 	background-color: #166083; */
 	background-color: #1b6182;
 	/* border-left: 2px solid #fff; */
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	align-self: stretch;
+	height: 100%;
+	-ms-flex-preferred-size: 200px;
+			flex-basis: 200px;
 }
 
 ul.photo-category-list li a span {
 	display: block;
 	text-align: center;
-	margin: auto;
+	/* margin: auto; */
 	width: 125px;
-	height: 65px;
-	line-height: 1.5;
-	padding-top: 10px;
+	/* height: 65px; */
+	/* line-height: 1.5; */
+	/* padding-top: 10px; */
+	align-self: center;
+	margin-top: auto;
+
+
+
 }
 ul.photo-category-list li a:hover {
 	background: #166083;
 }
 ul.photo-category-list li a img {
 	display: block;
-	margin: auto;
+	/* margin: auto; */
 	width: 100%;
 }
 
