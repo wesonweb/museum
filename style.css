@@ -294,6 +294,7 @@ color: rgb(85,85,85);
 color: #4c5760;
 color: #615d5d;
 color: rgb(97,93,93);
+color: #404040;
 background-color: #fff;
 /* background-color: #fff; */
 }
@@ -347,6 +348,7 @@ p {
 ul {
 	font-family: "Open Sans";
 	font-size: 1.1rem;
+	color: #404040;
 }
 
 @media (min-width: 710px) {
@@ -521,7 +523,7 @@ ol {
 
 ul {
 	list-style: disc;
-	list-style: none;
+	/* list-style: none; */
 	padding-left: 0;
 }
 
@@ -1552,13 +1554,48 @@ span.latest-news-header {
 	margin: 35px 0;
 	vertical-align: middle;
 }
+
+.latest-news-content {
+	margin: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
 .latest-post-meta {
 	/* margin-right: 10px; */
+	width: 100%;
 	display: block;
+	display: -webkit-box;
+	 display: -ms-flexbox;
+	 display: flex;
+ -webkit-box-orient: horizontal;
+ -webkit-box-direction: normal;
+		 -ms-flex-direction: row;
+				 flex-direction: row;
+ -ms-flex-wrap: wrap;
+		 flex-wrap: wrap;
+ -webkit-box-pack: center;
+		 -ms-flex-pack: center;
+				 justify-content: center;
+ -ms-flex-line-pack: center;
+		 align-content: center;
+ -webkit-box-align: center;
+		 -ms-flex-align: center;
+				 align-items: center;
+}
+
+.latest-post-meta h2 {
+	padding: 0;
+	margin: 0;
+}
+
+.latest-post-meta > div {
+	padding: 30px;
 }
 span.news-headline {
 	display: block;
-	margin: 20px 0 0;
+	/* margin: 20px 0 0; */
 	font-size: 1.5rem;
 }
 span.readmore a {
@@ -1570,9 +1607,16 @@ span.readmore a {
 }
 /*latest news*/
 .latest-news-container {
-	background: #7f9883;
+	/* background: #7f9883; */
 	background-color: #2f4f4f;
 	padding: 20px 0;
+}
+
+.temp-closure {
+	margin-top: 30px;
+	padding-top: 20px;
+	border-top: 1px solid #ddd;
+	background-color: #f1f3f1;
 }
 .latest-news {
 	margin: auto;
@@ -1621,8 +1665,8 @@ span.publish-date {
 		vertical-align: middle;
 	}
 	.latest-post-meta {
-		margin-right: 60px;
-		align-self: center;
+		/* margin-right: 60px;
+		align-self: center; */
 		/* display: block;
 		width: 60%;
 		float: left; */
@@ -3714,7 +3758,7 @@ span.jumpto a {
 SINGLE NEWS ITEM
 ************************************************************/
 .single-news-article {
-	/*width: 58em;*/
+	max-width: 48em;
 	margin: auto;
 }
 
@@ -3763,7 +3807,7 @@ span.slicknav_icon-bar {
 }
 
 .archive-news-listings li a:hover {
-	border-bottom: none;
+	/* border-bottom: none; */
 }
 @media (min-width: 500px) {
 	.archive-news-listings li a {
