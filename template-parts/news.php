@@ -8,8 +8,9 @@
   while ($newsarticles->have_posts() ):
   $newsarticles->the_post(); ?>
 
-  <?php the_post_thumbnail('news-thumb'); ?>
+
     <div class="latest-post-meta">
+      <?php the_post_thumbnail('news-thumb'); ?>
       <span class="news-headline"><?php the_title(); ?></span>
       <p><span class="readmore"><a href="<?php the_permalink(); ?>">Read more &rarr;</a></span></p>
     </div>

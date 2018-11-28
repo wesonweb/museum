@@ -1529,6 +1529,8 @@ li.has-children .active a {
 }
 span.latest-news-header {
 	font-family: "Lora";
+	font-size: 1.85rem;
+	font-weight: 700;
 }
 .latest-news-article h3 span.view-all a {
 	display: block;
@@ -1658,9 +1660,7 @@ span.publish-date {
 		letter-spacing: 3px;
 		/*font-weight: normal;*/
 	}
-	span.latest-news-header {
-		font-family: "Lora";
-	}
+
 	.latest-news-article h3 span.view-all a{
 		display: block;
 		font-size: 1rem;
@@ -1671,7 +1671,7 @@ span.publish-date {
 		text-transform: lowercase;
 	}
 	.latest-news-article h3 span.view-all a:hover {
-		border-bottom: none;
+		/* border-bottom: none; */
 	}
 	.latest-news-article h4 {
 		clear: both;
