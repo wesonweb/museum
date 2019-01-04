@@ -19,14 +19,11 @@
         </div>
         <div>
           <h2><span class="news-headline"><?php the_title(); ?></span></h2>
+          <p><?php the_excerpt(); ?></p>
           <p><span class="readmore"><a href="<?php the_permalink(); ?>">Read more &rarr;</a></span></p>
         </div>
       </div>
       <?php endwhile; ?>
       <?php wp_reset_query(); ?>
-      <!-- temporary message that museum is closed -->
-    <div class="temp-closure">
-      <?php the_field('homepage_temp_message'); ?>
-    </div>
   </section>
 </div><!-- end .latest-news-article-->

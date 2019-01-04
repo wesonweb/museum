@@ -8,6 +8,9 @@
 		</section>
 		<!-- opening times -->
 		<?php get_template_part('template-parts/opening', 'times'); ?>
+		<section class="latest-news-container">
+			<?php get_template_part('template-parts/news'); ?>
+		</section><!-- .news-wrapper-->
 		<?php if( get_field('latest_news') ): ?>
 		<section class="latest-news">
 			<div class="container">
@@ -69,6 +72,7 @@
 				</a>
 			</section>
 
+
 	</div> <!-- end homepage features -->
 
 			<!-- <section class="supportus-lottery">
@@ -80,11 +84,11 @@
 				</div>
 			</section> -->
 
-		<section class="latest-news-container">
-			<?php get_template_part('template-parts/news'); ?>
-		</section><!-- .news-wrapper-->
+			<section class="container"><div class="temp-closure">
+	      <?php the_field('homepage_temp_message'); ?>
+	    </div></section>
 
-		
+
 
 	</main><!-- .site-main -->
 <?php get_footer(); ?>

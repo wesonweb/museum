@@ -222,7 +222,7 @@ function news_post_init() {
         'has_archive'        => true,
         'hierarchical'       => true,
         'menu_position'      => 9,
-        'supports'           => array( 'title', 'thumbnail', 'editor', 'page-attributes' )
+        'supports'           => array( 'title', 'excerpt', 'thumbnail', 'editor', 'page-attributes' )
     );
 
     flush_rewrite_rules( true );
