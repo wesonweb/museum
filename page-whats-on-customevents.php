@@ -1,4 +1,4 @@
-<?php /* Template Name: what's on template */ ?>
+<?php /* Template Name: what's on template old? */ ?>
 
 <?php get_header(); ?>
 

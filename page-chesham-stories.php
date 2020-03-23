@@ -47,7 +47,6 @@
 		    <?php	//endwhile;?>
 		  </ul>
 		</div> <!-- end .story-navigation -->
-
 		<?php //get_template_part('template-parts/coming', 'soon'); ?>
 	</main><!-- .site-main -->
 

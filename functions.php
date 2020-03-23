@@ -263,6 +263,13 @@ global $wp_query;
 return ($wp_query->max_num_pages > 1);
 }
 
+// Tribe events calendar slug redirect
+function change_event_listing_slug( $args ) 
+	{ 
+		$args['rewrite']['slug'] = _x( 'whats-on', 'whats-on/events', 'wp-event-manager' ); 
+		return $args; 
+	} 
+	add_filter( 'register_post_type_event_listing', 'change_event_listing_slug' ); 
 
 
 

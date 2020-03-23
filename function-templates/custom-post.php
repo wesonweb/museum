@@ -2,47 +2,6 @@
 /*****************************
 *  register custom posts
 ***********************************/
-add_action( 'init', 'event_post_init' );
-
-function event_post_init() {
-    $labels = array(
-        'name'               => _x( 'Event', 'post type general name', 'your-plugin-textdomain' ),
-        'singular_name'      => _x( 'Event', 'post type singular name', 'your-plugin-textdomain' ),
-        'menu_name'          => _x( 'Event', 'admin menu', 'your-plugin-textdomain' ),
-        'name_admin_bar'     => _x( 'Event', 'add new on admin bar', 'your-plugin-textdomain' ),
-        'add_new'            => _x( 'Add a new event', 'mycustompost-name', 'your-plugin-textdomain' ),
-        'add_new_item'       => __( 'Add a new event', 'your-plugin-textdomain' ),
-        'new_item'           => __( 'New event', 'your-plugin-textdomain' ),
-        'edit_item'          => __( 'Edit event', 'your-plugin-textdomain' ),
-        'view_item'          => __( 'View event', 'your-plugin-textdomain' ),
-        'all_items'          => __( 'All events', 'your-plugin-textdomain' ),
-        'search_items'       => __( 'Search events', 'your-plugin-textdomain' ),
-        'parent_item_colon'  => __( 'Parent event:', 'your-plugin-textdomain' ),
-        'not_found'          => __( 'No events found.', 'your-plugin-textdomain' ),
-        'not_found_in_trash' => __( 'No events found in Trash.', 'your-plugin-textdomain' )
-    );
-
-    $args = array(
-        'labels'             => $labels,
-        'description'        => __( 'Description.', 'your-plugin-textdomain' ),
-        'public'             => true,
-        'publicly_queryable' => true,
-        'show_ui'            => true,
-        'show_in_menu'       => true,
-        'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'events' ),
-        'capability_type'    => 'post',
-        'has_archive'        => false,
-        'hierarchical'       => true,
-        'show_in_rest'       => true,
-        'menu_position'      => 4,
-        'supports'           => array( 'title', 'thumbnail', 'editor', 'comments', 'page-attributes' )
-    );
-
-    flush_rewrite_rules( true );
-
-    register_post_type( 'event', $args );
-}
 
 /****************************************************************************
  *register custom exhibition - this is for individual  exhibitions
@@ -55,7 +14,7 @@ function exhibition_post_init() {
         'name'               => _x( 'Exhibitions', 'post type general name', 'your-plugin-textdomain' ),
         'singular_name'      => _x( 'Exhibition', 'post type singular name', 'your-plugin-textdomain' ),
         'menu_name'          => _x( 'Exhibitions', 'admin menu', 'your-plugin-textdomain' ),
-        'name_admin_bar'     => _x( 'Exhibitions', 'add new on admin bar', 'your-plugin-textdomain' ),
+        'name_admin_bar'     => _x( 'Exhibition', 'add new on admin bar', 'your-plugin-textdomain' ),
         'add_new'            => _x( 'Add a new exhibition', 'mycustompost-name', 'your-plugin-textdomain' ),
         'add_new_item'       => __( 'Add a new exhibition', 'your-plugin-textdomain' ),
         'new_item'           => __( 'New exhibition', 'your-plugin-textdomain' ),

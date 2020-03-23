@@ -30,13 +30,14 @@
 							<?php the_field('friend_of_chesham_museum'); ?>
 					</div>
 				</div>
-
+				<?php if (get_field('super_friend_of_chesham_museum')): ?>
 				<div class="friend-container">
 					<div class="section-content">
 						<h3>super-friend</h3>
 							<?php the_field('super_friend_of_chesham_museum'); ?>
 					</div>
 				</div>
+				<?php endif; ?>
 
 				<div class="friend-container">
 					<div class="section-content">
