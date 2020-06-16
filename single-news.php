@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<main id="main" class="content clearfix" role="main">
+	<main id="main" class="content content-area clearfix" role="main">
 		<?php if ( have_posts() ): while( have_posts() ): the_post(); ?>
 			<article class="container clearfix single-news-article">
 				<h2><?php the_title(); ?></h2>

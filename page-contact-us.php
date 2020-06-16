@@ -1,6 +1,6 @@
 <?php /* Template Name: Contact */ ?>
 <?php get_header(); ?>
-	<main id="main" class="container" role="main">
+	<main id="main" class="container content-area" role="main">
 		<?php
 			// Start the loop.
 			while ( have_posts() ) : the_post(); ?>

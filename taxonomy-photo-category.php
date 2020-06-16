@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-		<main id="main" class="content" role="main">
+		<main id="main" class="content content-area" role="main">
 
 
 			<article class="container clearfix">
