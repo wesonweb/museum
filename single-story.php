@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-		<main id="main" class="content" role="main">
+		<main id="main" class="content content-area" role="main">
 			<div class="single-story-container container clearfix">
 
 				<aside class="story-navigation">

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-		<main id="main" class="archive-stories container clearfix" role="main">
+		<main id="main" class="archive-stories content-area container clearfix" role="main">
 			<aside class="minor-content-area inner-content">
 				<?php get_template_part('template-parts/story', 'nav'); ?>
 			</aside>

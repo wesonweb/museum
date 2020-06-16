@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-	<main id="main" class="content container" role="main">
+	<main id="main" class="content content-area container" role="main">
 		<section class="support-us-intro">
 			<div class="welcome-message container">
 				<h2>Support us: <?php the_title();?></h2>

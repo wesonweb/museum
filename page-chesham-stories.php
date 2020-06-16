@@ -3,13 +3,14 @@
 <?php get_header();?>
 
 
+	<section class="around-chesham-intro">
+		<div class="welcome-message">
+			<h2>Chesham stories</h2>
+		</div>
+	</section>
+	<div id="primary" class="">
 	<main id="main" class="content" role="main">
 
-		<section class="around-chesham-intro">
-			<div class="welcome-message">
-				<h2>Chesham stories</h2>
-			</div>
-		</section>
 
 
 		<div class="container">

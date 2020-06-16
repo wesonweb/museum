@@ -158,23 +158,33 @@ function vanilla_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'vanilla_scripts' );
 
-function cheshammuseum_style () {
-    wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css' );
+// function cheshammuseum_style () {
+//     wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css' );
 
+// }
+
+// add_action( 'wp_enqueue_scripts', 'cheshammuseum_style' );
+
+
+function cheshammuseum_register_styles(){
+	$version = wp_get_theme()->get( 'Version' );
+	wp_enqueue_style( 'cm-theme', get_template_directory_uri() . '/css/normalise.css', array(), $version, 'all' );
+	wp_enqueue_style( 'vanilla-theme', get_template_directory_uri() . '/style.css', array(), $version, 'all' );
+	wp_enqueue_style('fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css");
+	wp_enqueue_style('google-font', "https://fonts.googleapis.com/css?family=Lora|Merriweather:400,700|Open+Sans:400,600");
 }
-
-add_action( 'wp_enqueue_scripts', 'cheshammuseum_style' );
+add_action( 'wp_enqueue_scripts', 'cheshammuseum_register_styles' );
 
 
 //load google fonts
 
 
-function load_fonts() {
-					wp_register_style('googleFonts', 	'https://fonts.googleapis.com/css?family=Lora|Merriweather:400,700|Open+Sans:400,600');
+// function load_fonts() {
+// 					wp_register_style('googleFonts', 	'https://fonts.googleapis.com/css?family=Lora|Merriweather:400,700|Open+Sans:400,600');
 
-					wp_enqueue_style( 'googleFonts');
-			}
-					add_action('wp_print_styles', 'load_fonts');
+// 					wp_enqueue_style( 'googleFonts');
+// 			}
+// 					add_action('wp_print_styles', 'load_fonts');
 
 /**
  * Implement the Custom Header feature.

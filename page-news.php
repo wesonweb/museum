@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-	<main id="main" class="" role="main">
+	<main id="main" class="content-area" role="main">
 		<section class="homepage-intro">
 			<div class="welcome-message container">
 				<h2>Chesham Museum News</h2>

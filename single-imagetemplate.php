@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<main id="main" class="content clearfix" role="main">
+	<main id="main" class="content content-area clearfix" role="main">
 		<div class="container clearfix">
 			<!-- end aside -->
 			<article class="chesham-galleries">
