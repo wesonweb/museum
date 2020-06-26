@@ -524,7 +524,7 @@ a {
   color: var(--lightBlue);
 }
 
-a:before {
+main a:before {
   content: "";
   display: block;
   width: 100%;
@@ -533,11 +533,11 @@ a:before {
   position: absolute;
   left: 0;
   bottom: -3px; /* this is to match where the border is */
-  transform-origin: left;
+  transform-origin: center;
   transform: scale(0);
   transition: 0.25s linear;
 }
-a:hover:before {
+main a:hover:before {
   transform: scale(1);
 }
 /*--------------------------------------------------------------
@@ -2438,13 +2438,6 @@ a.cta:hover {
   background-color: #103e59;
 }
 
-.back-link::after {
-  content: "\25BA";
-  font-size: 18px;
-  margin-top: 6px;
-  padding: 10px 0 0 10px;
-}
-
 @media (min-width: 650px) {
   .event-container {
     /*width: 48%;*/
@@ -2659,8 +2652,9 @@ AROUND CHESHAM
   list-style-type: none;
   display: inline-block;
   /* border: 2px solid rgb(218,199,181); */
-  background-color: rgba(218, 199, 181, 0.5);
-  background-color: rgba(242, 243, 216, 0.5);
+  /* background-color: rgba(218, 199, 181, 0.5); */
+  /* background-color: rgba(242, 243, 216, 0.5); */
+  background-color: var(--paleGold);
   margin-right: 5px;
   margin-bottom: 10px;
 }
@@ -2698,8 +2692,8 @@ span.sentence-summary {
 }
 
 .around-chesham-story-theme-list li a:hover {
-  background-color: rgb(218, 199, 181);
-  background-color: rgba(242, 243, 216, 0.95);
+  /* background-color: rgb(218, 199, 181);
+  background-color: rgba(242, 243, 216, 0.95); */
 }
 
 @media (min-width: 650px) {
@@ -3044,8 +3038,8 @@ ul.photo-category-list li a {
   ul.chesham-images-container li {
     /* -ms-flex-preferred-size: 49%;
 	    flex-basis: 49%; */
-    -ms-flex-preferred-size: 200px;
-    flex-basis: 200px;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
   }
 }
 
@@ -3053,8 +3047,8 @@ ul.photo-category-list li a {
   ul.chesham-images-container li {
     /* -ms-flex-preferred-size: 33%;
 	    flex-basis: 33%; */
-    -ms-flex-preferred-size: 20%;
-    flex-basis: 20%;
+    /* -ms-flex-preferred-size: 20%;
+    flex-basis: 20%; */
   }
 
   .image-copyright {
@@ -3875,8 +3869,9 @@ span.story-list-title {
 .story-list-sidebar li {
   /* border-bottom: 1px dotted #f1eee0; */
   /* border: 2px solid rgb(218,199,181); */
-  background-color: rgba(218, 199, 181, 0.5);
-  background-color: rgba(242, 243, 216, 0.5);
+  /* background-color: rgba(218, 199, 181, 0.5);
+  background-color: rgba(242, 243, 216, 0.5); */
+  background-color: var(--paleGold);
   margin-bottom: 5px;
   list-style-type: none;
 }
@@ -3897,9 +3892,9 @@ span.story-list-title {
 }
 
 .story-list-sidebar li a:hover {
-  background-color: rgb(218, 199, 181);
+  /* background-color: rgb(218, 199, 181);
 
-  background-color: rgba(242, 243, 216, 0.9);
+  background-color: rgba(242, 243, 216, 0.9); */
 }
 
 /*individual stories list*/
