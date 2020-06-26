@@ -20,8 +20,8 @@
 						height="200" alt="picture of Market Square Chesham">
 					<div class="section-nav">
 						<div>
-							<h3>What's on</h3>
-							<p>Join us on one of our upcoming events.</p>
+							<h3>What's on <i class="fas fa-angle-right"></i></h3>
+							<p>Join us on one of our upcoming events or view our exhibitions.</p>
 						</div>
 					</div>
 				</a>
@@ -33,7 +33,7 @@
 					height="200" alt="map of Chesham museum location">
 					<div class="section-nav">
 						<div>
-							<h3>Explore Chesham's history</h3>
+							<h3>Explore Chesham's history <i class="fas fa-angle-right"></i></h3>
 							<p>Photos of Chesham's past</p>
 						</div>
 					</div>
@@ -46,7 +46,7 @@
 					height="200" alt="photo of two stewards at Chesham museum">
 						<div class="section-nav">
 							<div>
-								<h3>Support us</h3>
+								<h3>Support us <i class="fas fa-angle-right"></i></h3>
 								<p>Make a cash gift, donate items or volunteer to support the museum.</p>
 							</div>
 						</div>
@@ -59,7 +59,7 @@
 					height="200" width="200" alt="photo of an area in Chesham">
 					<div class="section-nav">
 						<div>
-							<h3>Chesham stories</h3>
+							<h3>Chesham stories <i class="fas fa-angle-right"></i></h3>
 							<p>Read the life stories of
 							Chesham's residents.</p>
 						</div>

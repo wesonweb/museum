@@ -4,7 +4,7 @@ Theme URI: http://localhost/cheshammuseum
 Author: wes
 Author URI: http://wesleymehaffy.co.uk
 Description: Chesham Museum website theme
-Version: 2.0.1
+Version: 2.2.1
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
@@ -47,7 +47,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   --lightGreen: rgba(82, 131, 131, 0.605);
   --green: #2f4f4f;
   --blue: #1b6694;
-  --lightBlue: #2075ab;
+  --lightBlue: rgba(32, 117, 171, 1);
   --paleGold: rgba(220, 206, 175, 0.2);
 }
 
@@ -115,7 +115,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.125em;
+  font-size: 1.225em;
 }
 
 p {
@@ -151,6 +151,9 @@ ul {
 
   h3 {
     font-size: 1.55em;
+  }
+  h4 {
+    font-size: 1.3em;
   }
 
   p {
@@ -472,14 +475,14 @@ label {
 --------------------------------------------------------------*/
 a {
   display: inline-block;
-  -webkit-transition: color 0.3s ease;
+  /* -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
   -ms-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
   padding-bottom: 2px;
-  color: #1b6694;
-  border-bottom: 2px solid #166083;
+  color: #1b6694; */
+  /* border-bottom: 2px solid #166083; */
   text-decoration: none;
 }
 
@@ -491,10 +494,10 @@ a:hover,
 a:active {
   /*border-bottom: 3px solid #166083;*/
   /*padding-bottom: 3px;*/
-  transition: ease-in 0.15s;
+  /* transition: ease-in 0.15s;
   color: #166083;
-  text-decoration: none;
-  border-bottom: 2px dotted #166083;
+  text-decoration: none; */
+  /* border-bottom: 2px dotted #166083; */
 }
 
 a:focus {
@@ -514,6 +517,29 @@ a.footer-link:active {
   border-bottom: none;
 }
 
+a {
+  /* border-bottom: 3px solid var(--lightBlue); */
+  transition: all 0.25s linear;
+  position: relative;
+  color: var(--lightBlue);
+}
+
+a:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--blue);
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* this is to match where the border is */
+  transform-origin: left;
+  transform: scale(0);
+  transition: 0.25s linear;
+}
+a:hover:before {
+  transform: scale(1);
+}
 /*--------------------------------------------------------------
 ## Social media
 ---------------------------------------------------------------*/
@@ -1604,15 +1630,15 @@ span.publish-date {
 a .section-nav div {
   width: 90%;
   margin: auto;
-  padding: 10px 0;
+  padding: 16px 8px;
 }
 
-.section-nav div h3:after {
+/* .section-nav div h3:after {
   content: "\25BA";
   font-size: 0.9rem;
   margin-top: 6px;
   padding: 10px 0 0 10px;
-}
+} */
 
 .section-nav div h3 {
   text-align: center;
@@ -1622,7 +1648,7 @@ a .section-nav div {
 }
 
 .homepage-asset-container {
-  width: 100%;
+  /* width: 100%; */
   padding-bottom: 15px;
 }
 
@@ -1640,6 +1666,11 @@ a .section-nav div {
 .section-nav {
   /* width: 90%; */
   margin: 0 auto;
+  transition: all ease-in-out 0.5s;
+}
+.section-nav:hover {
+  /* width: 90%; */
+  transform: translateY(-10px);
 }
 
 .section-nav > div h3,
@@ -1662,8 +1693,14 @@ span.left-post-nav a {
   }
 
   .homepage-asset-container img {
-    max-width: 400px;
+    /* max-width: 400px; */
     margin: auto;
+  }
+
+  .homepage-asset-container img {
+    /* float: none; */
+    width: 80%;
+    /* max-height: 500px; */
   }
 
   .homepage-asset-container img {
@@ -1688,7 +1725,9 @@ span.left-post-nav a {
 @media (min-width: 700px) {
   .homepage-features {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: flex-start;
     align-content: center;
     margin: 3rem auto 0;
@@ -1696,7 +1735,8 @@ span.left-post-nav a {
 
   .homepage-features > section {
     align-self: stretch;
-    flex-grow: 1;
+    flex-basis: 22%;
+    flex-grow: 0;
     margin: 10px;
   }
   .homepage-asset-container a {
@@ -1751,7 +1791,7 @@ span.left-post-nav a {
 
   .homepage-asset-container img {
     /* float: none; */
-    /*width: 80%;*/
+    width: 80%;
     /* max-height: 500px; */
   }
 }
@@ -1979,20 +2019,25 @@ span.ticket-price {
 /**************************************************
 EXHIBITIONS PAGE
 ***************************************************/
-
+.exhibition-banner {
+  margin-top: 3rem;
+  margin-bottom: -10px;
+}
 .currentexhibitioncontainer,
 .pastexhibitioncontainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: stretch;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: flex-start;
+  padding: 1rem;
 }
 
 .current-exhibition,
 .past-exhibition {
   flex-basis: 400px;
+  max-width: 75%;
   margin: 10px;
   flex-grow: 1;
   align-content: stretch;
@@ -2007,27 +2052,71 @@ EXHIBITIONS PAGE
   max-width: 100%;
 }
 
-.exhibition-summary {
-  width: 100%;
-  padding: 10px;
-  background-color: rgba(242, 243, 216, 0.2);
-  background-color: #f9f5ed;
+.exhibition__intro {
+  padding: 1rem 0;
+  background: rgb(234, 222, 125);
+  background: linear-gradient(
+    140deg,
+    rgba(234, 222, 125, 0.39272977941176474) 3%,
+    rgba(234, 222, 125, 0.27155330882352946) 45%,
+    rgba(32, 117, 171, 0.35449929971988796) 100%
+  );
 }
 
-.exhibition-summary h1 {
+/* .exhibition__intro .past {
+  background: rgb(31, 120, 175);
+  background: linear-gradient(
+    175deg,
+    rgba(31, 120, 175, 0.4906337535014006) 3%,
+    rgba(27, 102, 148, 0.3113620448179272) 45%,
+    rgba(27, 102, 148, 0.12368697478991597) 100%
+  );
+} */
+.exhibition__intro--text {
+  margin: 3rem auto 3rem 0;
+  /* border-left: 10px solid var(--blue);
+  border-left: 10px solid rgba(234, 221, 125, 0.619);
+  border-left: 10px solid var(--green);
+  border-left: 10px solid var(--lightBlue); */
+  padding-left: 3rem;
+}
+
+.exhibition__intro--text h2 {
+  font-weight: 700;
+  font-size: 1.55rem;
+}
+.exhibition__intro--text p {
+  font-size: 1rem;
+}
+
+.exhibition__excerpt {
+  padding: 15px;
+}
+.exhibition__excerpt a.button {
+  margin-top: 2rem;
+}
+.exhibition__excerpt::before {
+  content: "";
+  display: block;
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-bottom: 5px solid rgba(32, 117, 171, 0.75);
+}
+
+.exhibition__summary {
+  padding: 10px;
+}
+
+.exhibition__summary p {
   font-size: 1.2em;
-  background-color: #305b53;
-  color: #fff;
   text-align: center;
   padding: 10px;
   margin: 0;
   letter-spacing: 1px;
 }
 
-.excerpt {
-  padding: 10px;
-}
-.exhibition-summary a {
+.exhibition__summary a {
   display: block;
   text-align: center;
   margin: 15px auto;
@@ -2035,54 +2124,77 @@ EXHIBITIONS PAGE
   font-weight: 700;
   font-size: 1.2rem;
 }
-.exhibition-summary a:hover {
+.exhibition__summary a:hover {
   border-bottom: none;
 }
 
 .past {
-  background-color: rgba(48, 90, 82, 0.2);
+  /* background-color: rgba(48, 90, 82, 0.2); */
 }
-.exhibition-summary img {
+.exhibition__summary img {
   width: 100%;
   /* max-width: 500px; */
 }
 
-h3.exhibition-title {
+h3.exhibition__title {
+  text-align: center;
   color: #333;
   margin: 10px 0;
-  text-align: center;
-  font-size: 1.65rem;
+  font-size: 1.85rem;
 }
 
-.exhibition-meta {
+.exhibition__meta {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   font-weight: 700;
-  background-color: rgba(48, 90, 82, 0.67);
-  background-color: #539987;
+  /* background-color: rgba(48, 90, 82, 0.67); */
+  /* background-color: #539987; */
   margin-bottom: 15px;
   max-width: 48em;
   margin: auto;
 }
-.exhibition-meta p {
-  font-size: 0.9rem;
+
+.exhibition__meta p {
+  font-size: 1.2rem;
+}
+
+span.exhibition__location {
+  display: inline-block;
+  font-size: 1rem;
+  font-style: italic;
+  margin-right: 8px;
+}
+
+.exhibition__date {
+  display: block;
+  /* text-align: right; */
+  /* font-style: italic; */
+  font-size: 1rem;
+}
+.exhibition__meta p {
   margin: 0;
   padding: 8px;
-  color: #fff;
 }
-.exhibition-content {
+.exhibition__content {
   margin: 20px 0;
   padding: 0 15px;
   font-size: 1.1em;
-  max-width: 36em;
+  max-width: 60em;
   margin: auto;
   color: #333;
 }
 
-.exhibition-content figcaption {
+.exhibition__content .exhibition__summary {
+  width: 100%;
+}
+
+.exhibition__content figcaption {
   font-size: 0.85rem;
+}
+.exhibition__content a {
+  display: inline;
 }
 fsing .wp-caption img[class*="wp-image-"] {
   width: 100%;
@@ -2093,46 +2205,160 @@ img.image-banner {
 }
 
 /* ----- single exhibition page ----- */
-.single-exhibition .exhibition-summary h3 {
-  font-size: 1.65em;
+.single-exhibition .single-exhibition__summary h3 {
+  font-size: 1.85em;
   /* text-align: left; */
   /* margin: 0; */
 }
-.single-exhibition .exhibition-meta {
+.single-exhibition .single-exhibition__meta {
   justify-content: center;
   align-content: center;
   margin: 0 auto 20px;
   /* background: rgba(242, 243, 216, 0.2); */
   background-color: #f9f5ed;
 }
-.single-exhibition .exhibition-meta p {
+.single-exhibition .single-exhibition__meta p {
   color: #333;
 }
 
-.other-exhibition-lists {
+.other-exhibitions a {
+  display: block;
+  text-align: right;
+  margin-top: 2.5rem;
+  border-bottom: none;
+}
+
+.other-exhibitions a:hover h3 {
+  color: var(--lightBlue);
+}
+
+.other-exhibitions--lists {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  flex-flow: row;
+  flex-direction: row;
   justify-content: center;
   align-content: center;
 }
 
-.other-exhibition-lists li a {
+.other-exhibitions--lists li a {
   display: block;
-  margin: 15px 15px 0 0;
+  margin: 5px 0 5px 5px;
+  padding: 2px;
 }
 
-.other-exhibitions h3 {
+.other-exhibitions h3,
+.other-exhibitions h4 {
   text-align: center;
 }
 
-@media (min-width: 920px) {
-  .single-exhibition .exhibition-summary h3 {
+.other-exhibitions h4 span {
+  font-size: 90%;
+}
+
+.other-exhibitions h4 {
+  font-weight: 400;
+}
+.exhibition__extra-info {
+  margin-top: 4rem;
+  border-top: 3px solid var(--paleGold);
+}
+.exhibition__extra-info--download {
+  margin-bottom: 2.5rem;
+}
+.exhibition__extra-info--download a,
+.exhibition__extra-info--download a:hover {
+  display: block;
+  border-bottom: none;
+  font-weight: 700;
+}
+.exhibition__extra-info--download a h3 {
+  text-align: center;
+}
+.exhibition__extra-info--download a:hover h3 {
+  padding-bottom: 0;
+  color: var(--lightBlue);
+}
+
+.exhibition__extra-info--download a img {
+  max-width: 340px;
+  display: block;
+  margin: auto;
+}
+
+@media (min-width: 700px) {
+  .current-exhibition,
+  .past-exhibition {
+    max-width: 50%;
+  }
+  .exhibition__intro {
+    padding: 2rem 0;
+  }
+  .exhibition__extra-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 60em;
+    margin: 4rem auto 0;
+    padding: 0 10px;
+  }
+  .other-exhibitions--lists {
+    justify-content: flex-end;
+  }
+  .exhibition__extra-info--download a h3 {
+    text-align: left;
+  }
+
+  .other-exhibitions a {
+    margin-top: 0;
+  }
+
+  .other-exhibitions h3,
+  .other-exhibitions h4 {
+    text-align: right;
+  }
+  .other-exhibitions h4 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 800px) {
+  .exhibition__intro--text {
+    max-width: 50%;
+  }
+  .exhibition__summary {
+    width: 85%;
+    max-width: 60em;
+  }
+
+  .exhibition__intro--text h2 {
+    font-weight: 700;
+    font-size: 2.1rem;
+  }
+  .exhibition__intro--text p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+  }
+
+  .single__exhibition .exhibition__summary h3 {
     font-size: 2.75em;
   }
-  .single-exhibition .exhibition-meta p {
+  .single__exhibition .exhibition__meta p {
     font-size: 1.1em;
+  }
+}
+
+@media (min-width: 950px) {
+  .currentexhibitioncontainer,
+  .pastexhibitioncontainer {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  h3.exhibition__title {
+    font-size: 2.25rem;
+    margin: 1.5rem 0;
   }
 }
 
@@ -2866,7 +3092,7 @@ section > p {
 
 section img {
   display: block;
-  width: 100%;
+  /* width: 100%; */
   max-width: 100%;
   margin: auto;
 }
@@ -3993,7 +4219,7 @@ object {
 
 .wp-caption-text {
   text-align: left;
-  padding: 5px;
+  padding: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -4137,8 +4363,8 @@ object {
 }
 
 figcaption.wp-caption-text {
-  background: #000;
-  color: #fff;
+  background: var(--paleGold);
+  color: #222;
 }
 
 /* slider styles */

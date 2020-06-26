@@ -2,7 +2,8 @@
 /* Template Name: exhibitions template */
 get_header(); ?>
 	<div id="primary" class="content-area container">
-		<main id="main" class="">		
+		<main id="main" class="">
+        <img src="<?php ?>" alt="Chesham Museum exhibitions banner" />
             <!-- WP query to show current exhibitions -->
             <div class="container exhibitions">
                 <!-- <h2>Current exhibitions</h2> -->
