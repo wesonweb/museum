@@ -25,7 +25,7 @@ get_header(); ?>
 				if(
 					is_page_template('page-full-width-support.php')) : ?>
 					<h3>Find other ways to get involved</h3>
-					<p><a href="<?php echo get_page_link(30); ?>" class="back-link">Visit our support us page</a></p>
+					<p><a href="<?php echo get_page_link(30); ?>" class="back-link"><i class="far fa-arrow-alt-circle-left"></i> Visit our support us page </a></p>
 				<?php endif; ?>
 
 

@@ -14,7 +14,7 @@
 							<h3><?php the_title(); ?></h3>
 							<span class="author"><?php the_field('author'); ?></span>
 							<div class="excerpt"><?php the_excerpt(); ?></div>
-							<a href="<?php the_permalink(); ?>">Read more &rarr; </a>
+							<a href="<?php the_permalink(); ?>">Read more <i class="far fa-arrow-alt-circle-right"></i> </a>
 						</li>
 						<?php endwhile; ?>
 					</ul>
