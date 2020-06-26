@@ -475,14 +475,14 @@ label {
 --------------------------------------------------------------*/
 a {
   display: inline-block;
-  -webkit-transition: color 0.3s ease;
+  /* -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
   -ms-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
   padding-bottom: 2px;
-  color: #1b6694;
-  border-bottom: 2px solid #166083;
+  color: #1b6694; */
+  /* border-bottom: 2px solid #166083; */
   text-decoration: none;
 }
 
@@ -494,10 +494,10 @@ a:hover,
 a:active {
   /*border-bottom: 3px solid #166083;*/
   /*padding-bottom: 3px;*/
-  transition: ease-in 0.15s;
+  /* transition: ease-in 0.15s;
   color: #166083;
-  text-decoration: none;
-  border-bottom: 2px dotted #166083;
+  text-decoration: none; */
+  /* border-bottom: 2px dotted #166083; */
 }
 
 a:focus {
@@ -517,6 +517,29 @@ a.footer-link:active {
   border-bottom: none;
 }
 
+a {
+  /* border-bottom: 3px solid var(--lightBlue); */
+  transition: all 0.25s linear;
+  position: relative;
+  color: var(--lightBlue);
+}
+
+a:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--blue);
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* this is to match where the border is */
+  transform-origin: left;
+  transform: scale(0);
+  transition: 0.25s linear;
+}
+a:hover:before {
+  transform: scale(1);
+}
 /*--------------------------------------------------------------
 ## Social media
 ---------------------------------------------------------------*/
