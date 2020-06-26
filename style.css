@@ -2793,21 +2793,33 @@ ul.chesham-images-container li img:hover {
 ul.chesham-images-container li a {
   display: block;
   position: relative;
+  transition: all ease-in-out 0.5s;
 }
 
 ul.chesham-images-container li a span.gallery-landing-thumbnail {
   position: absolute;
-  bottom: 0;
+  bottom: 45%;
   left: 0;
   opacity: 0.95;
   letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+}
+
+ul.chesham-images-container li a:hover {
+  transform: scale(0.98);
 }
 
 .gallery-landing-thumbnail {
   display: block;
   /* width: 300px; */
   width: 100%;
-  background: #3f5e73;
+  /* background: #3f5e73; */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* background: var(--lightBlue); */
+  background: rgba(32, 117, 171, 0.8);
+  /* background: rgba(220, 206, 175, 0.7); */
   /* background-color: #347b75; */
   color: white;
   padding: 5px;
@@ -3023,6 +3035,7 @@ ul.photo-category-list li a {
     flex-wrap: wrap;
   }
 
+  /* appears at bottom  */
   ul.photo-category-list li {
     -ms-flex-preferred-size: 100px;
     flex-basis: 100px;
@@ -3043,16 +3056,34 @@ ul.photo-category-list li a {
   }
 }
 
+@media (min-width: 850px) {
+  .gallery-landing-thumbnail {
+    font-size: 1.4rem;
+  }
+}
+
 @media (min-width: 1000px) {
   ul.chesham-images-container li {
-    /* -ms-flex-preferred-size: 33%;
-	    flex-basis: 33%; */
-    /* -ms-flex-preferred-size: 20%;
-    flex-basis: 20%; */
+    /* -ms-flex-preferred-size: 49%;
+	    flex-basis: 49%; */
+    -ms-flex-preferred-size: 32%;
+    flex-basis: 32%;
   }
-
+  .gallery-landing-thumbnail {
+    font-size: 1.35rem;
+    padding: 1rem 0;
+  }
   .image-copyright {
     width: 65%;
+  }
+}
+@media (min-width: 1400px) {
+  .gallery-landing-thumbnail {
+    font-size: 1.6rem;
+  }
+  .chesham-images-container {
+    max-width: 76em;
+    margin: auto;
   }
 }
 
