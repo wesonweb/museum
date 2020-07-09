@@ -16,7 +16,7 @@
 
         <div class="latest-post-meta">
           <div>
-            <?php the_post_thumbnail('homepage-thumb'); ?>
+            <?php the_post_thumbnail(); ?>
           </div>
           <div>
             <h2><span class="news-headline"><?php the_title(); ?></span></h2>
