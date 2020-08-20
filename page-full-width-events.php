@@ -8,7 +8,7 @@ get_header(); ?>
 		<main id="main" >
             <div class="container">
                 <h3>Coronavirus (COVID-19) information </h3>
-                <p>Due to the Coronavirus pandemic all Chesham Museum events will be cancelled until further notice.</p>
+                <p>Due to the COVID-19 pandemic some Chesham Museum events may be cancelled until further notice.</p>
             </div>
 
             <?php if(have_posts()) : while(have_posts()): the_post();
