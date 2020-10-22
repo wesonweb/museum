@@ -4,7 +4,7 @@ Theme URI: http://localhost/cheshammuseum
 Author: wes
 Author URI: http://wesleymehaffy.co.uk
 Description: Chesham Museum website theme
-Version: 2.2.4
+Version: 2.2.6
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
@@ -1305,6 +1305,47 @@ ul[aria-expanded="true"] li:hover ul {
 @media (min-width: 1400px) {
   .welcome-message h2 {
     /*font-size: 3rem;*/
+  }
+}
+
+.home__latest-news {
+  max-width: 1024px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home__latest-news-text {
+  flex-grow: 0;
+}
+
+.home__latest-news a.button {
+  margin: auto;
+}
+.home_latest-news-image img {
+  max-height: 400px;
+  object-fit: contain;
+}
+
+@media (min-width: 700px) {
+  .home__latest-news {
+    flex-direction: row;
+    margin: 35px auto;
+  }
+
+  .home__latest-news-text {
+    margin-left: 2rem;
+  }
+  .home__latest-news-text h2 {
+    text-align: left;
+  }
+  .home__latest-news a.button {
+    margin: 20px 0;
+  }
+
+  .home_latest-news-image {
+    margin-left: 50px;
+    flex-basis: 50%;
   }
 }
 
@@ -4538,6 +4579,11 @@ ul.tax-list li a:hover {
 
 /* events calendar  */
 
+/* featured event */
+.tribe-event-featured {
+  background-color: #21aade;
+}
+
 .tribe-events-back a {
   font-size: 1.1rem;
 }
@@ -4607,4 +4653,9 @@ ul.tax-list li a:hover {
 /* feature image on single event page - max width */
 .tribe-events-event-image img {
   max-width: 50%;
+}
+.covid h3,
+.covid p {
+  color: rgb(128, 128, 128);
+  text-align: center;
 }

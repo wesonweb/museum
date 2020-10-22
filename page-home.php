@@ -12,7 +12,26 @@
 			</div>
 		</section> -->
 		<!-- opening times -->
-		
+		<section class="home__latest-news container">
+			<div class="home__latest-news-text">
+				<?php if(get_field('latest_news')) : ?>
+					<?php the_field('latest_news'); ?>
+				<?php endif; ?>
+				<?php if(get_field('latest_news_link')) : ?>
+					<a href="<?php the_field('latest_news_link'); ?>" class="button">Find out more</a>
+				<?php endif; ?>
+			</div>
+			<div class="home_latest-news-image">
+				<?php if(get_field('latest_news_image')) : ?>
+					<?php 
+						$image = get_field('latest_news_image');
+						if( !empty( $image ) ): ?>
+							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+						<?php endif; ?>
+				<?php endif; ?>
+			</div>
+			
+		</section>
 		<div class="homepage-features container clearfix">
 			<section class="homepage-asset-container">
 				<a href="<?php echo get_permalink(11); ?>">
