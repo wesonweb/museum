@@ -15,7 +15,7 @@
         $newsarticles->the_post(); ?>
 
         <div class="latest-post-meta">
-          <div>
+          <div class="latest-post-meta__image">
             <?php the_post_thumbnail(); ?>
           </div>
           <div>

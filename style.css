@@ -4,7 +4,7 @@ Theme URI: http://localhost/cheshammuseum
 Author: wes
 Author URI: http://wesleymehaffy.co.uk
 Description: Chesham Museum website theme
-Version: 2.2.6
+Version: 2.2.8
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
@@ -72,13 +72,6 @@ body {
   font-family: "Open Sans", Merriweather Sans, sans-serif;
   line-height: 1.6;
   font-size: 100%;
-  color: #2e2e2e;
-  color: #353431;
-  color: #585451;
-  color: rgb(85, 85, 85);
-  color: #4c5760;
-  color: #615d5d;
-  color: rgb(97, 93, 93);
   color: #404040;
   background-color: #fff;
   /* background-color: #fff; */
@@ -155,10 +148,6 @@ ul {
   h4 {
     font-size: 1.3em;
   }
-
-  p {
-    /* font-size: 1.2rem; */
-  }
 }
 
 dfn,
@@ -169,13 +158,12 @@ i {
 }
 
 blockquote {
-  border-left: 7px solid #b21f1f;
+  border-left: 7px solid var(--lightGreen);
   padding-left: 15px;
   margin: 15px 0;
 }
 
 blockquote {
-  /* background: #f9f9f9; */
   background: rgba(127, 152, 134, 0.1);
   border-left: 10px solid #2b5f80;
   margin: 1em 0;
@@ -475,15 +463,10 @@ label {
 --------------------------------------------------------------*/
 a {
   display: inline-block;
-  /* -webkit-transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease;
-  -ms-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-  padding-bottom: 2px;
-  color: #1b6694; */
-  /* border-bottom: 2px solid #166083; */
   text-decoration: none;
+  transition: all 0.25s linear;
+  position: relative;
+  color: var(--lightBlue);
 }
 
 a:visited {
@@ -515,13 +498,6 @@ a.footer-link:hover,
 a.footer-link:active {
   color: #fff;
   border-bottom: none;
-}
-
-a {
-  /* border-bottom: 3px solid var(--lightBlue); */
-  transition: all 0.25s linear;
-  position: relative;
-  color: var(--lightBlue);
 }
 
 main a:before {
@@ -601,15 +577,8 @@ Footer
 ----------------------------------------------------*/
 footer {
   clear: both;
-  /* background: #799A81;
-	background: #4d7356;
-	background-color: #347b75;
-	background-color: #3b8473; */
-  /* background-color: #4c4c4c; */
-  /* background-color: #f1f3f1; */
   background-color: #2f4f4f;
   background-color: #305b53;
-  /* padding: 20px 0; */
 }
 
 .sponsor-details {
@@ -655,10 +624,6 @@ footer {
 }
 
 .site-info {
-  /* background-color: #4c4c4c;
-  background-color: #2c4848;
-  background-color: #457975; */
-  background-color: #2f4f4f;
   background-color: #305b53;
   padding: 20px 0;
 }
@@ -712,16 +677,6 @@ footer {
   border-bottom: none;
   text-align: center;
   color: #fff;
-}
-
-.main-navigation a:hover {
-  /* background: #377795;
-	background-color: #457696;
-	color: #fff; */
-  /* background: #377795; */
-  /* background-color: #457696; */
-  /* color: #457696; */
-  /* border-bottom: 3px solid #457696; */
 }
 
 /*--- sub menu navigation---*/
@@ -1016,9 +971,6 @@ ul[aria-expanded="true"] li:hover ul {
     top: 100%;
     left: -999em;
     z-index: 99999;
-    /* border-left: 2px solid #457692;
-    border-right: 2px solid #457692;
-    border-bottom: 2px solid #457692; */
   }
 }
 
@@ -1327,6 +1279,11 @@ ul[aria-expanded="true"] li:hover ul {
   object-fit: contain;
 }
 
+.latest-post-meta__image img {
+  max-height: 400px;
+  object-fit: contain;
+}
+
 @media (min-width: 700px) {
   .home__latest-news {
     flex-direction: row;
@@ -1447,7 +1404,7 @@ span.news-headline {
 }
 
 span.readmore a {
-  display: block;
+  display: inline-block;
   /* margin-top: 10px; */
   font-size: 1.2rem;
   color: #1e536b;
@@ -2147,10 +2104,6 @@ EXHIBITIONS PAGE
 } */
 .exhibition__intro--text {
   margin: 3rem auto 3rem 0;
-  /* border-left: 10px solid var(--blue);
-  border-left: 10px solid rgba(234, 221, 125, 0.619);
-  border-left: 10px solid var(--green);
-  border-left: 10px solid var(--lightBlue); */
   padding-left: 3rem;
 }
 
@@ -2222,8 +2175,6 @@ h3.exhibition__title {
   align-items: center;
   justify-content: space-between;
   font-weight: 700;
-  /* background-color: rgba(48, 90, 82, 0.67); */
-  /* background-color: #539987; */
   margin-bottom: 15px;
   max-width: 48em;
   margin: auto;
@@ -2242,8 +2193,6 @@ span.exhibition__location {
 
 .exhibition__date {
   display: block;
-  /* text-align: right; */
-  /* font-style: italic; */
   font-size: 1rem;
 }
 .exhibition__meta p {
@@ -2280,14 +2229,11 @@ img.image-banner {
 /* ----- single exhibition page ----- */
 .single-exhibition .single-exhibition__summary h3 {
   font-size: 1.85em;
-  /* text-align: left; */
-  /* margin: 0; */
 }
 .single-exhibition .single-exhibition__meta {
   justify-content: center;
   align-content: center;
   margin: 0 auto 20px;
-  /* background: rgba(242, 243, 216, 0.2); */
   background-color: #f9f5ed;
 }
 .single-exhibition .single-exhibition__meta p {
@@ -2449,9 +2395,7 @@ a.button {
   display: block;
   width: 250px;
   margin: 20px 0 10px;
-  /* background-color: #2b5c73; */
   background-color: #1b6694;
-  /* background-color: #347b75; */
   color: #f1eee0;
   font-family: "Open Sans";
   text-align: center;
@@ -2466,10 +2410,8 @@ a.center-button {
   border-bottom: none;
   display: block;
   width: 200px;
-  /*margin: auto;*/
   margin: 10px auto 10px;
   background: #2b5c73;
-  /* background-color: #347b75; */
   color: #f1eee0;
   color: #fff;
   font-family: "Open Sans";
@@ -2495,7 +2437,6 @@ a.cta {
   border-bottom: none;
   display: block;
   width: 200px;
-  /* margin: auto; */
   background: #365b70;
   background-color: #1b6694;
   color: #f1eee0;
@@ -2527,12 +2468,7 @@ a.cta:hover {
   }
 
   .event-container h2 {
-    /*font-size: 1.55rem;*/
     padding-top: 16px;
-  }
-
-  a.button {
-    /*left: 20px;*/
   }
 }
 
@@ -2548,16 +2484,9 @@ a.cta:hover {
   }
 
   .event-container li {
-    /*width: 300px;*/
-    /*margin: 50px 4px 0 0;*/
-    /*new styling*/
     width: 40%;
     float: left;
     margin: 0 5% 30px 5%;
-  }
-
-  a.button {
-    /*left: 20px;*/
   }
 
   .event-container li:nth-child(2n + 1) {
@@ -2590,12 +2519,10 @@ a.cta:hover {
 SINGLE EVENTS POST
 ***************************************************/
 .single-event {
-  /*max-width: 64em;*/
   margin: auto;
 }
 
 .craft-event-info {
-  /*width: 75%;*/
   padding-top: 50px;
   margin: auto;
 }
@@ -2636,8 +2563,6 @@ SINGLE EVENTS POST
 .event-thumbnail img {
   display: block;
   margin: auto;
-  /*width: 150px;*/
-  /*margin: 10px auto;*/
 }
 
 @media (min-width: 900px) {
@@ -2650,7 +2575,6 @@ SINGLE EVENTS POST
     width: 63%;
     float: right;
     padding-left: 5%;
-    /*padding-top: 2rem;*/
   }
 }
 
@@ -2792,13 +2716,6 @@ PLAN YOUR VISIT
 }
 
 /* CHESHAM IMAGES  */
-.around-chesham-images {
-  /* background-color: #e4e1cf;
-	background-color: #e7e4d5; */
-  /* background-color: rgba(228, 227, 196, 0.35); */
-  /* border-top: 4px solid rgba(228, 227, 196, 0.45); */
-  /* border-bottom: 4px solid rgba(228, 227, 196, 0.45); */
-}
 
 .around-chesham-images h1 {
   margin: 0;
@@ -2829,8 +2746,6 @@ PLAN YOUR VISIT
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  /* -ms-flex-line-pack: distribute; */
-  /* align-content: space-around; */
   margin: 5px;
   list-style: none;
 }
@@ -2920,9 +2835,6 @@ span.gallery-heading {
   text-align: left;
   margin: 0;
   padding: 10px;
-  /* background: #4c8273;
-  background-color: #1d506e;
-  color: white; */
 }
 
 /* image copyright info */
@@ -2942,11 +2854,8 @@ span.gallery-heading {
 .photo-category-list-container {
   background: #457692;
   background-color: #1e506d;
-  /* background-color: rgba(0,0,0,.80); */
   text-align: center;
   line-height: 1.9;
-  /* border-radius: 10px 10px 0 0; */
-  /* margin-bottom: 25px; */
 }
 
 .photo-category-list-container .container {
@@ -2963,18 +2872,6 @@ span.gallery-heading {
   font-size: 1.4rem;
   margin: 0;
 }
-
-/* .photo-category-list-container h3 {
-	display: inline-block;
-	color: #000;rem;
-	text-transform: uppercase;
-	padding: 10px;
-	margin: 0;
-	background-color: #347b75;
-	background-color: #fff;
-	line-height: 1.9;
-	border-top: 2px solid white;
-} */
 .category-title-container {
   padding: 0;
 }
@@ -2997,11 +2894,9 @@ span.gallery-heading {
 ul.photo-category-list {
   max-width: 52em;
   margin: auto;
-  /* display: inline-block; */
   text-align: center;
   text-align: left;
   padding: 0 0 20px 0;
-  /* background-color: #4c8273; */
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3020,14 +2915,13 @@ ul.photo-category-list {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  /* align-content: stretch; */
 
   flex-grow: 0;
   margin-bottom: 0;
+  list-style: none;
 }
 
 ul.photo-category-list li {
-  /* display: inline-block; */
   padding: 0;
   margin: 5px 10px;
   -ms-flex-item-align: start;
@@ -3111,10 +3005,7 @@ ul.photo-category-list li a {
   /* appears at bottom  */
   ul.photo-category-list li {
     -ms-flex-preferred-size: 100px;
-    flex-basis: 100px;
-
-    /* -ms-flex-preferred-size: 50px;
-					flex-basis: 50px; */
+    flex-basis: 150px;
 
     -webkit-box-flex: 0;
     -ms-flex-positive: 0;
@@ -3137,8 +3028,6 @@ ul.photo-category-list li a {
 
 @media (min-width: 1000px) {
   ul.chesham-images-container li {
-    /* -ms-flex-preferred-size: 49%;
-	    flex-basis: 49%; */
     -ms-flex-preferred-size: 32%;
     flex-basis: 32%;
   }
@@ -3246,21 +3135,6 @@ section > a {
   -ms-flex-line-pack: center;
   align-content: center;
 }
-
-/* } */
-/* @supports (display: grid) {
-	.support-container {
-			display: -ms-grid;
-			display: grid;
-		  -ms-grid-columns: (1fr)[1];
-		      grid-template-columns: repeat(1, 1fr);
-		  grid-gap: 1em;
-		  grid-auto-rows: minmax(300px, auto);
-		  -webkit-box-align: top;
-		      -ms-flex-align: top;
-		          align-items: top;
-		}
- } */
 
 .friend-intro {
   width: 80%;
