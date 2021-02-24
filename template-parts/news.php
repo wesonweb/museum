@@ -1,4 +1,4 @@
-<div class="latest-news-article container clearfix">
+<div class="latest-news-article clearfix">
   <h3>
     <span class="latest-news-header">Museum news</span>
     <span class="view-all"><a href="<?php echo get_page_link(321); ?>">read all news &rarr;</a></span>

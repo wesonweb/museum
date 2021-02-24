@@ -49,6 +49,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   --blue: #1b6694;
   --lightBlue: rgba(32, 117, 171, 1);
   --paleGold: rgba(220, 206, 175, 0.2);
+  --bg-gold: rgba(215, 213, 154, 0.75);
+  --bg-gold-light: rgba(215, 213, 154, 0.25);
 }
 
 /*--------------------------------------------------------------
@@ -465,7 +467,6 @@ a {
   display: inline-block;
   text-decoration: none;
   transition: all 0.25s linear;
-  position: relative;
   color: var(--lightBlue);
 }
 
@@ -500,22 +501,6 @@ a.footer-link:active {
   border-bottom: none;
 }
 
-main a:before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: var(--blue);
-  position: absolute;
-  left: 0;
-  bottom: -3px; /* this is to match where the border is */
-  transform-origin: center;
-  transform: scale(0);
-  transition: 0.25s linear;
-}
-main a:hover:before {
-  transform: scale(1);
-}
 /*--------------------------------------------------------------
 ## Social media
 ---------------------------------------------------------------*/
@@ -1308,25 +1293,21 @@ ul[aria-expanded="true"] li:hover ul {
 
 /*news article */
 .latest-news-article {
-  width: 80%;
-  /* margin: 35px auto; */
-  background: var(--paleGold);
-  padding: 40px;
-  border-bottom: 1px solid rgba(204, 204, 204, 0.74);
+  max-width: 700px;
+  margin: auto;
+  background: var(--bg-gold-light);
+  padding: 25px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  /* border-bottom: 1px solid rgba(204, 204, 204, 0.74); */
 }
 
 .latest-news-article h3 {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  /* padding-bottom: 5px;
-  font-size: 1.4rem;
-  letter-spacing: 3px;
-  margin: 0; */
-  /*font-weight: normal;*/
 }
 
 .latest-news-article p a {
@@ -1394,7 +1375,7 @@ span.latest-news-header {
 }
 
 .latest-post-meta > div {
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 span.news-headline {
@@ -1413,11 +1394,9 @@ span.readmore a {
 
 /*latest news*/
 .latest-news-container {
-  /* background: #7f9883; */
-  /* background-color: #2f4f4f; */
   padding: 20px 0;
-  max-width: 1600px;
   margin: auto;
+  background-color: #fff;
 }
 
 .temp-closure {
@@ -1652,55 +1631,48 @@ span.publish-date {
 .homepage-features {
   width: 100%;
   margin: auto;
-  padding: 35px 0;
-}
-.section-nav {
-  width: 100%;
-}
-a .section-nav div {
-  width: 90%;
-  margin: auto;
-  padding: 16px 8px;
-}
-
-/* .section-nav div h3:after {
-  content: "\25BA";
-  font-size: 0.9rem;
-  margin-top: 6px;
-  padding: 10px 0 0 10px;
-} */
-
-.section-nav div h3 {
-  text-align: center;
-  margin-bottom: 0;
-  font-size: 1.2rem;
-  font-weight: 700;
+  padding: 35px 0 0;
 }
 
 .homepage-asset-container {
-  /* width: 100%; */
-  padding-bottom: 15px;
+  list-style: none;
 }
 
-.homepage-asset-container:hover {
-  opacity: 0.95;
-}
-
-.homepage-asset-container > a {
-  border-bottom: none;
-  text-decoration: none;
+.homepage-asset-container a {
+  position: relative;
   width: 100%;
-  margin: auto;
+}
+
+.homepage-asset-container a img {
+  width: 100%;
 }
 
 .section-nav {
-  /* width: 90%; */
+  width: 90%;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  border-radius: 15px;
+  background: var(--bg-gold);
+}
+a .section-nav div {
+  padding: 1rem;
+}
+
+.section-nav div h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.section-nav {
   margin: 0 auto;
   transition: all ease-in-out 0.5s;
 }
 .section-nav:hover {
   /* width: 90%; */
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 
 .section-nav > div h3,
@@ -1729,7 +1701,7 @@ span.left-post-nav a {
 
   .homepage-asset-container img {
     /* float: none; */
-    width: 80%;
+    /* width: 80%; */
     /* max-height: 500px; */
   }
 
@@ -1744,7 +1716,7 @@ span.left-post-nav a {
     margin: auto;
     padding-right: 50px;
     padding-top: 0; */
-    background: rgba(220, 206, 175, 0.2);
+    /* background: rgba(220, 206, 175, 0.2); */
   }
 
   a .section-nav * {
@@ -1762,15 +1734,20 @@ span.left-post-nav a {
     align-content: center;
     margin: 3rem auto 0;
   }
+  .homepage-asset-container {
+    list-style: none;
+    flex-basis: 50%;
+    /* width: 100%; */
+    /* padding-bottom: 15px; */
+  }
 
   .homepage-features > section {
     align-self: stretch;
-    flex-basis: 22%;
+    /* flex-basis: 22%; */
     flex-grow: 0;
     margin: 10px;
   }
   .homepage-asset-container a {
-    /* background: pink; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1791,6 +1768,10 @@ span.left-post-nav a {
   .homepage-asset-container a .section-nav p {
     font-size: 1rem;
     margin: 10px auto 0;
+  }
+
+  .section-nav div h3 {
+    font-size: 1.55rem;
   }
 }
 
@@ -1821,7 +1802,7 @@ span.left-post-nav a {
 
   .homepage-asset-container img {
     /* float: none; */
-    width: 80%;
+    /* width: 80%; */
     /* max-height: 500px; */
   }
 }
@@ -1835,11 +1816,16 @@ span.left-post-nav a {
     float: left; */
   }
 
-  /* .homepage-asset-container:nth-child(2n + 1) {
-    clear: left;
-  } */
+  .section-nav div h3 {
+    font-size: 1.8rem;
+  }
 }
-
+@media (min-width: 1600px) {
+  .features-container {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
 /**************************************************
 HERO IMAGES
 ***************************************************/
