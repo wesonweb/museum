@@ -47,6 +47,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   --lightGreen: rgba(82, 131, 131, 0.605);
   --green: #2f4f4f;
   --blue: #1b6694;
+  --links: #377795;
   --lightBlue: rgba(32, 117, 171, 1);
   --paleGold: rgba(220, 206, 175, 0.2);
 }
@@ -466,7 +467,8 @@ a {
   text-decoration: none;
   transition: all 0.25s linear;
   position: relative;
-  color: var(--lightBlue);
+  color: var(--links);
+  border-bottom: 2px solid var(--lightBlue);
 }
 
 a:visited {
@@ -481,6 +483,7 @@ a:active {
   color: #166083;
   text-decoration: none; */
   /* border-bottom: 2px dotted #166083; */
+  border-bottom: 2px solid var(--links);
 }
 
 a:focus {
@@ -500,22 +503,6 @@ a.footer-link:active {
   border-bottom: none;
 }
 
-main a:before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: var(--blue);
-  position: absolute;
-  left: 0;
-  bottom: -3px; /* this is to match where the border is */
-  transform-origin: center;
-  transform: scale(0);
-  transition: 0.25s linear;
-}
-main a:hover:before {
-  transform: scale(1);
-}
 /*--------------------------------------------------------------
 ## Social media
 ---------------------------------------------------------------*/
@@ -3371,38 +3358,38 @@ section > a {
 .friend-container .section-content {
   width: 80%;
   margin: auto;
-  background: #799a81;
+  /* background: #799a81;
   background: #4d7356;
-  background-color: #3c8473;
+  background-color: #3c8473; */
   padding: 25px 35px;
-  border-bottom: 5px solid #799a81;
-  border-left: 5px solid #799a81;
+  /* border-bottom: 5px solid #799a81; */
+  /* border-left: 5px solid #799a81; */
 }
 
 .friend-application .section-content {
   width: 80%;
   margin: auto;
   padding: 25px 35px;
-  background: #3e6374;
-  border-bottom: 5px solid #377795;
-  border-left: 5px solid #377795;
+  /* background: #3e6374; */
+  /* border-bottom: 5px solid #377795; */
+  /* border-left: 5px solid #377795; */
   color: #fff;
   line-height: 1.5;
 }
 
 .friend-application .section-content a {
-  padding: 12px 20px;
-  margin-top: 8px;
-  color: #377795;
-  color: #fff;
-  background: #456272;
-  border: 1px solid #fff;
+  /* padding: 12px 20px;
+  margin-top: 8px; */
+  color: var(--links);
+  /* color: #fff; */
+  /* background: #456272; */
+  /* border: 1px solid #fff; */
   /* border-bottom: none; */
 }
 
 .friend-application .section-content a:hover {
-  background: #377795;
-  color: #f1eee0;
+  /* background: #377795; */
+  /* color: #f1eee0; */
 }
 
 .friend-container h2 {
@@ -3411,7 +3398,7 @@ section > a {
 
 .friend-container h3 {
   letter-spacing: 1px;
-  color: #fff;
+  /* color: #fff; */
 }
 
 .section-content > ul {
@@ -3421,16 +3408,16 @@ section > a {
 
 .friend-container p,
 .friend-application p {
-  color: #fff;
+  /* color: #fff; */
 }
 
 .friend-container p:first-child {
-  color: #404040;
+  /* color: #404040; */
 }
 
 .section-content > ul > li {
   list-style-type: circle;
-  color: #fff;
+  /* color: #fff; */
   padding-bottom: 3px;
 }
 
@@ -3440,13 +3427,13 @@ span.for-life {
   margin-top: 15px;
   padding-top: 8px;
   border-top: 1px solid #fff;
-  color: #fff;
+  /* color: #fff; */
   font-size: 1.65rem;
   letter-spacing: 1px;
 }
 
 .friend-application h3 {
-  color: #fff;
+  /* color: #fff; */
 }
 
 /*corporate sponsors and friends*/
