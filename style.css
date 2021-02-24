@@ -4,7 +4,7 @@ Theme URI: http://localhost/cheshammuseum
 Author: wes
 Author URI: http://wesleymehaffy.co.uk
 Description: Chesham Museum website theme
-Version: 2.3.0
+Version: 2.3.1
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
@@ -50,7 +50,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   --links: #377795;
   --lightBlue: rgba(32, 117, 171, 1);
   --paleGold: rgba(220, 206, 175, 0.2);
-  --bg-gold: rgba(215, 213, 154, 0.75);
+  --bg-gold: rgba(215, 213, 154, 0.9);
   --bg-gold-light: rgba(215, 213, 154, 0.25);
 }
 
@@ -106,7 +106,7 @@ h2 {
 
 h3 {
   font-size: 1.375em;
-  color: #404040;
+  color: #353434;
   font-weight: 400;
 }
 
@@ -1251,11 +1251,13 @@ ul[aria-expanded="true"] li:hover ul {
 }
 
 .home__latest-news {
-  max-width: 1024px;
+  max-width: 700px;
   margin: auto;
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .home__latest-news-text {
   flex-grow: 0;
@@ -1277,7 +1279,7 @@ ul[aria-expanded="true"] li:hover ul {
 @media (min-width: 700px) {
   .home__latest-news {
     flex-direction: row;
-    margin: 35px auto;
+    margin: 50px auto;
   }
 
   .home__latest-news-text {
@@ -1300,7 +1302,7 @@ ul[aria-expanded="true"] li:hover ul {
 .latest-news-article {
   max-width: 700px;
   margin: auto;
-  background: var(--bg-gold-light);
+  /* background: var(--bg-gold-light); */
   padding: 25px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   /* border-bottom: 1px solid rgba(204, 204, 204, 0.74); */
@@ -1646,6 +1648,7 @@ span.publish-date {
 .homepage-asset-container a {
   position: relative;
   width: 100%;
+  border: none;
 }
 
 .homepage-asset-container a img {
@@ -1771,12 +1774,11 @@ span.left-post-nav a {
   }
 
   .homepage-asset-container a .section-nav p {
-    font-size: 1rem;
     margin: 10px auto 0;
   }
 
   .section-nav div h3 {
-    font-size: 1.55rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -1824,10 +1826,13 @@ span.left-post-nav a {
   .section-nav div h3 {
     font-size: 1.8rem;
   }
+  .section-nav p {
+    font-size: 1.35rem;
+  }
 }
-@media (min-width: 1600px) {
+@media (min-width: 1500px) {
   .features-container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: auto;
   }
 }
