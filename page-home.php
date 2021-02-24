@@ -12,7 +12,7 @@
 			</div>
 		</section> -->
 		<!-- opening times -->
-		<section class="home__latest-news container">
+		<section class="home__latest-news">
 			<div class="home__latest-news-text">
 				<?php if(get_field('latest_news')) : ?>
 					<?php the_field('latest_news'); ?>
