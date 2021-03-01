@@ -1606,8 +1606,7 @@ span.publish-date {
   width: 90%;
   position: absolute;
   bottom: 5%;
-  left: 5%;
-  border-radius: 15px;
+  left: 0;
   background: var(--bg-gold);
 }
 a .section-nav div {
@@ -1615,14 +1614,14 @@ a .section-nav div {
 }
 
 .section-nav div h3 {
-  text-align: center;
+  text-align: left;
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 0;
 }
 
 .section-nav {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   transition: all ease-in-out 0.5s;
 }
 .section-nav:hover {
@@ -1632,7 +1631,7 @@ a .section-nav div {
 
 .section-nav > div h3,
 .section-nav > div p {
-  text-align: center;
+  text-align: left;
   margin-top: 0;
 }
 
@@ -1743,8 +1742,8 @@ span.left-post-nav a {
   .homepage-asset-container a .section-nav p {
     margin: 10px auto 0;
   }
-
-  .section-nav div h3 {
+  .section-nav {
+    width: 75%;
     font-size: 1.5rem;
   }
 }

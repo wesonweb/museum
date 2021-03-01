@@ -40,7 +40,7 @@
 					<div class="section-nav">
 						<div>
 							<h3>What's on <i class="fas fa-angle-right"></i></h3>
-							<p>Join us on one of our upcoming events or view our exhibitions.</p>
+							<p>Join us at our events or view our exhibitions.</p>
 						</div>
 					</div>
 				</a>
@@ -65,7 +65,7 @@
 						<div class="section-nav">
 							<div>
 								<h3>Support us <i class="fas fa-angle-right"></i></h3>
-								<p>Make a cash gift, donate items or volunteer to support the museum.</p>
+								<p>Make a donation or volunteer to support the museum.</p>
 							</div>
 						</div>
 				</a>
