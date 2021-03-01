@@ -40,7 +40,7 @@
 					<div class="section-nav">
 						<div>
 							<h3>What's on <i class="fas fa-angle-right"></i></h3>
-							<p>Join us on one of our upcoming events or view our exhibitions.</p>
+							<p>Join us at our events or view our exhibitions.</p>
 						</div>
 					</div>
 				</a>
@@ -48,7 +48,7 @@
 
 			<li class="homepage-asset-container">
 				<a href="<?php echo get_permalink(582); ?>">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aerial-shot.jpg"
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/fromtheair_min.jpg"
 					height="" alt="map of Chesham museum location">
 					<div class="section-nav">
 						<div>
@@ -61,12 +61,11 @@
 
 			<li class="homepage-asset-container">
 				<a href="<?php echo get_permalink(30); ?>">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/stewards250.jpg"
-					height="" alt="photo of two stewards at Chesham museum">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/circlefriends.jpg" alt="circle of people with their feet together">
 						<div class="section-nav">
 							<div>
 								<h3>Support us <i class="fas fa-angle-right"></i></h3>
-								<p>Make a cash gift, donate items or volunteer to support the museum.</p>
+								<p>Make a donation or volunteer to support the museum.</p>
 							</div>
 						</div>
 				</a>
@@ -74,7 +73,7 @@
 
 			<li class="homepage-asset-container">
 				<a href="<?php echo get_permalink(893); ?>">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/charles-collins.jpg"
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/chesham-stories_min.jpg"
 					height="" width="200" alt="photo of an area in Chesham">
 					<div class="section-nav">
 						<div>
