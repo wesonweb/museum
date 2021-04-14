@@ -5,7 +5,7 @@
 			<?php get_template_part('template-parts/story', 'nav'); ?>
 		</aside>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<article class="story-container container clearfix">
+				<article class="story-container clearfix">
 					<span class="story-term">
 						<?php
 							$terms = get_the_terms( $post->ID, 'story-category' );

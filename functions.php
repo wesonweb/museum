@@ -49,7 +49,7 @@ function vanilla_setup() {
 	// add html5 shim
 	function add_ie_html5_shim () {
 	    echo '<!--[if lt IE 9]>';
-	    echo '<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>';
+	    echo '<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>';
 	    echo '<![endif]-->';
 	}
 	add_action('wp_head', 'add_ie_html5_shim');
@@ -61,14 +61,6 @@ function vanilla_setup() {
 	return $mime_types;
 	}
 	add_filter('upload_mimes', 'my_myme_types', 1, 1);
-
-
-
-	// deregister default jQuery included with Wordpress
-		wp_deregister_script( 'jquery' );
-
-		$jquery_cdn = '//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js';
-		wp_enqueue_script( 'jquery', $jquery_cdn, array(), '2.2.4', true );
 
 	// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -144,12 +136,18 @@ add_action( 'widgets_init', 'vanilla_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+
+
+
+// deregister default jQuery included with Wordpress
+	wp_deregister_script( 'jquery' );
+	$jquery_cdn = '//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js';
+	wp_enqueue_script( 'jquery', $jquery_cdn, array(), '2.2.4', true );
+
+
 function vanilla_scripts() {
-
-	//wp_enqueue_style( 'vanilla-style', get_stylesheet_uri() );
-
+	wp_enqueue_script( 'museum-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '20151216', true );
 	wp_enqueue_script( 'vanilla-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-	wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'vanilla-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -158,13 +156,6 @@ function vanilla_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'vanilla_scripts' );
-
-// function cheshammuseum_style () {
-//     wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css' );
-
-// }
-
-// add_action( 'wp_enqueue_scripts', 'cheshammuseum_style' );
 
 
 function cheshammuseum_register_styles(){
@@ -175,7 +166,6 @@ function cheshammuseum_register_styles(){
 	wp_enqueue_style('google-font', "https://fonts.googleapis.com/css?family=Lora|Merriweather:400,700|Open+Sans:400,600");
 }
 add_action( 'wp_enqueue_scripts', 'cheshammuseum_register_styles' );
-
 
 //load google fonts
 
