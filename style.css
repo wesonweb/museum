@@ -48,6 +48,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   --green: #2f4f4f;
   --links: #1b6694;
   --lightBlue: rgba(32, 117, 171, 1);
+  --darkBlue: #2b5c73;
   --paleGold: rgba(220, 206, 175, 0.2);
   --bg-gold: rgba(233, 233, 146, 0.9);
   --bg-gold-light: rgba(215, 213, 154, 0.25);
@@ -381,6 +382,16 @@ input[type="submit"]:active {
   box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+button.secondary {
+  background: #fff;
+  border: 2px solid #2b5c73;
+  border-radius: 4px;
+  color: #222;
+}
+.fa-chevron-down {
+  font-size: 90%;
+  margin-left: 12px;
+}
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -3706,7 +3717,6 @@ STORIES
 .story-navigation ul li {
   list-style-type: none;
   display: block;
-  text-align: center;
 }
 
 .story-navigation ul li a {
@@ -3749,14 +3759,24 @@ span.author {
 }
 
 /*sidebar story nav styling*/
+.minor-content-area {
+  flex-basis: 25%;
+  padding-left: 20px;
+}
 
 .story-list-sidebar {
-  margin: 0 0 50px;
-  padding: 15px;
+  margin: 25px 0 50px;
+  padding: 15px 0;
+  display: none;
+}
+.story-list-sidebar.open {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .story-themes h2 {
-  text-align: center;
   font-size: 1.3rem;
   color: #4c5760;
   letter-spacing: 1px;
@@ -3787,15 +3807,19 @@ span.story-list-title {
 }
 .story-list-sidebar li a,
 .around-chesham-story-theme-list li a {
-  border: 2px solid var(--links);
+  border: 2px solid var(--darkBlue);
   border-radius: var(--br);
   display: block;
+  margin: auto;
   text-align: center;
-  color: var(--links);
+  color: var(--darkBlue);
   font-size: 1.2rem;
   padding: 5px 10px 5px 0;
+  max-width: 250px;
 }
-
+.story-list-sidebar li a {
+  margin: 0;
+}
 .story-list-sidebar li a:hover,
 .around-chesham-story-theme-list li a:hover {
   background-color: var(--links);
@@ -3844,11 +3868,14 @@ ul.story-themes-list {
     width: 90%;
   }
 
-  .story-navigation {
+  .story-list-sidebar.open {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
-  .story-container {
-  }
-  .story-navigation ul li {
+  .story-list-sidebar.open li {
+    flex-basis: 200px;
+    margin-right: 10px;
   }
 
   .story-navigation ul li a {
@@ -3874,11 +3901,6 @@ ul.story-themes-list {
     display: inline-block;
   }
 
-  .minor-content-area {
-    width: 25%;
-    float: left;
-  }
-
   .minor-content-area ul li {
     list-style-type: none;
     display: block;
@@ -3891,8 +3913,7 @@ ul.story-themes-list {
   }
 
   .main-content-area {
-    width: 70%;
-    float: left;
+    flex-basis: 70%;
   }
 }
 

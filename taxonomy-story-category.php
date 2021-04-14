@@ -5,7 +5,7 @@
 			</aside>
 
 			<div class="main-content-area stories">
-				<div class="container">
+				<div class="">
 					<h2><?php $term = get_term_by( 'slug', get_query_var( 'term' ),
 					get_query_var( 'taxonomy' ) ); echo $term->name; ?></h2>
 					<ul class="story-themes-list">
