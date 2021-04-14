@@ -6,8 +6,8 @@
 
 			<div class="main-content-area stories">
 				<div class="">
-					<h2><?php $term = get_term_by( 'slug', get_query_var( 'term' ),
-					get_query_var( 'taxonomy' ) ); echo $term->name; ?></h2>
+					<h2><em>You're viewing stories about <?php $term = get_term_by( 'slug', get_query_var( 'term' ),
+					get_query_var( 'taxonomy' ) ); echo $term->name; ?></em></h2>
 					<ul class="story-themes-list">
 						<?php while ( have_posts() ) : the_post(); ?>
 						<li class="single-story-summary">
