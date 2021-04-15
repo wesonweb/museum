@@ -465,6 +465,34 @@ label {
   padding-bottom: 20px;
 }
 
+/* shop order form */
+#wpforms-1168-field_6 {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#wpforms-1168-field_6 li {
+  flex-basis: 200px;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+#wpforms-1168-field_6 li label span.wpforms-image-choices-image,
+#wpforms-1168-field_6 li label span.wpforms-image-choices-label {
+  display: block;
+}
+#wpforms-1168-field_6 li label span.wpforms-image-choices-label {
+  max-width: 90%;
+}
+#wpforms-1168-field_6 li label span.wpforms-image-choices-image img {
+  height: 200px;
+  object-fit: contain;
+}
+
+#wpforms-1168-field_6 li label span.wpforms-image-choices-image {
+  margin-top: 8px;
+}
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -527,6 +555,8 @@ header {
 
 .header-wrap {
   width: 100%;
+  max-width: 1200px;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -838,9 +868,6 @@ ul[aria-expanded="true"] li:hover ul {
   .logo {
     -ms-flex-preferred-size: 250px;
     flex-basis: 250px;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
     margin-top: -30px;
   }
 
