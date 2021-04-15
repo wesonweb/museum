@@ -4,7 +4,7 @@ Theme URI: http://localhost/cheshammuseum
 Author: wes
 Author URI: http://wesleymehaffy.co.uk
 Description: Chesham Museum website theme
-Version: 2.4.8
+Version: 2.4.9
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
@@ -3935,6 +3935,12 @@ ul.story-themes-list {
   }
   .story-themes h2 {
     text-align: left;
+  }
+}
+
+@media (min-width: 1000px) {
+  .archive-stories {
+    display: flex;
   }
 }
 
