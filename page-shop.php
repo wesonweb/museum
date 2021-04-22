@@ -26,6 +26,9 @@
 			</section><!-- end .shop -->
 			<section class="publications">
 				<h2>Publications for sale </h2>
+							<?php if(get_field('book_introductory_text')) : ?>
+								<?php the_field('book_introductory_text'); ?>
+							<?php endif; ?>
 					<?php if( have_rows('book_repeater_fields') ): ?>
 						<ul class="book-list">
 
@@ -55,7 +58,7 @@
 									<?php endif; ?>
 
 									<?php if( $price ): ?>
-										<span class="price">price: £<?php echo $price; ?></span>
+										<span class="price">£ <?php echo $price; ?></span>
 									<?php endif; ?>
 
 									<?php if( $synopsis ): ?>
@@ -66,7 +69,13 @@
 					<?php endwhile; endif; ?>
 					</ul>
 
-					<p><span class="buy-info">If you would like to buy any of our products, email shop@cheshammuseum.org.uk</span></p>
+					<p>
+						<span id="order-form">
+							<?php if (get_field('order_form')) : ?>
+								<?php the_field('order_form'); ?>
+							<?php endif; ?>
+						</span>
+					</p>
 						</article>
 			<?php //get_template_part('template-parts/coming', 'soon'); ?>
 
