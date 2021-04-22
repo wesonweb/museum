@@ -854,6 +854,7 @@ ul[aria-expanded="true"] li:hover ul {
   background: #457692;
   background: #2f4f4f;
   color: #fff;
+  min-width: 200px;
 }
 
 @media (min-width: 800px) {
