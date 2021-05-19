@@ -34,21 +34,25 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'vanilla' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="header-wrap clearfix">
-			<div class="logo">
-				<h1><a href="<?php bloginfo('url');?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/cheshammuseum.jpg" alt=""
-				width="" height=""></a></h1>
+		<div class="navigation-container">
+			<div class="logo-nav">
+				<a href="<?php bloginfo('url');?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/cheshammuseum.jpg" alt=""
+				width="" height="" id="logo-link"></a>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><div class="line-one"></div><div class="line-two"></div><div class="line-three"></div></button>
 			</div>
-			<nav id="site-navigation" class="main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Open Menu', 'update' ); ?></button>
-				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-						'walker'				 => new Clean_Walker_Nav
-					) );
-				?>
-			</nav>
+			<?php
+				wp_nav_menu( array(
+					'theme_location'	=> 'menu-1',
+					'menu_class'		=> 'nav-menu',
+					'menu_id'			=> 'nav-menu',
+					'container'			=> 'nav',
+					'container_class'	=> 'main-navigation',
+					'container_id'		=>	'main-navigation',
+					'echo'				=> true,
+					'walker'			=> new Clean_Walker_Nav()
+					
+				));
+			?>
 		</div>
 	</header>
 	<div id="content" class="site-content">

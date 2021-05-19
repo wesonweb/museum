@@ -224,10 +224,9 @@ require(get_template_directory().'/function-templates/dynamic-sidebars.php');
  */
 require(get_template_directory().'/function-templates/admin-area.php');
 
-/**
- * navigation (add arrows to submenu and tidy up nav ids and classes)
- */
-require(get_template_directory().'/function-templates/navigation.php');
+
+// get walker nav for wp_nav_menu
+require get_template_directory().'/function-templates/walker.php';
 
 
 	/*************************************************************************
