@@ -24,8 +24,6 @@
 
 		gtag('config', 'UA-93994388-1');
 	</script>
-
-	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"> -->
 	<?php wp_head(); ?>
 </head>
 
