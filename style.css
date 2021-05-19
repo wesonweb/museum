@@ -2356,7 +2356,7 @@ h2.previous-exhibitions {
 }
 
 a.button,
-.wpforms-submit-960 {
+#wpforms-submit-960 {
   border-bottom: none;
   display: block;
   width: 250px;
