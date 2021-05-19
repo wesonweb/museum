@@ -178,7 +178,7 @@ function news_post_init() {
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'museum-news' ),
         'capability_type'    => 'post',
-        'has_archive'        => true,
+        'has_archive'        => false,
         'hierarchical'       => true,
         'menu_position'      => 9,
         'supports'           => array( 'title', 'excerpt', 'thumbnail', 'editor', 'page-attributes' )
