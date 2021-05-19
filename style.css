@@ -380,6 +380,7 @@ button.secondary {
   border: 2px solid #2b5c73;
   border-radius: 4px;
   color: #222;
+  padding: 1rem;
 }
 .fa-chevron-down {
   font-size: 90%;
@@ -2354,7 +2355,8 @@ h2.previous-exhibitions {
   max-width: 100%;
 }
 
-a.button {
+a.button,
+.wpforms-submit-960 {
   border-bottom: none;
   display: block;
   width: 250px;
