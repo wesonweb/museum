@@ -543,7 +543,7 @@ header {
 .site-header {
   margin-bottom: -190px;
   max-width: 1600px;
-  margin-left: auto;
+  margin: 0 auto -190px;
 }
 .content {
   width: 100%;
