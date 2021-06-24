@@ -4,7 +4,7 @@ Theme URI: http://localhost/cheshammuseum
 Author: wes
 Author URI: http://wesleymehaffy.co.uk
 Description: Chesham Museum website theme
-Version: 2.5.2
+Version: 2.5.3
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
@@ -1239,45 +1239,21 @@ span.latest-news-header {
 .latest-news-article img.attachment-news-thumb {
   display: block;
   margin: 35px 0;
-  vertical-align: middle;
 }
 
 .latest-news-content {
-  max-width: 75%;
   margin: auto;
 }
 
 .latest-post-meta {
-  /* margin-right: 10px; */
   width: 100%;
   padding: 20px 0;
   display: block;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .latest-post-meta h2 {
   padding: 0;
   margin: 0;
-}
-
-.latest-post-meta > div {
-  /* padding: 20px; */
 }
 
 span.news-headline {
@@ -1375,14 +1351,6 @@ span.publish-date {
     vertical-align: middle;
   }
 
-  .latest-post-meta {
-    /* margin-right: 60px;
-		align-self: center; */
-    /* display: block;
-		width: 60%;
-		float: left; */
-  }
-
   span.news-headline {
     display: block;
     /* margin: 20px 0 0 20px; */
@@ -1441,6 +1409,35 @@ span.publish-date {
   }
 }
 
+@media (min-width: 700px) {
+  .latest-post-meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .latest-post-meta div {
+    flex-basis: 300px;
+    flex-grow: 1;
+  }
+  .latest-post-meta__image {
+    margin-right: 2rem;
+  }
+}
+
 @media (min-width: 850px) {
   .latest-news h2 {
     font-size: 2.4rem;
@@ -1451,8 +1448,7 @@ span.publish-date {
   }
 
   .latest-news-article {
-    /* width: 90%; */
-    /* margin: 35px auto; */
+    max-width: 1024px;
   }
 
   .latest-news-article h3 {
