@@ -26,9 +26,8 @@
         </div>
         <?php endwhile; ?>
         <?php wp_reset_query(); ?>
-      
-        <div class="latest-post-meta">
+  </section>
+  <div class="">
 						<?php the_field('homepage_temp_message'); ?>
 					</div>
-  </section>
 </div><!-- end .latest-news-article-->
