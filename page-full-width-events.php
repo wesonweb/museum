@@ -6,10 +6,10 @@
 get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" >
-            <div class="container covid">
+            <!-- <div class="container covid">
                 <h3>Coronavirus (COVID-19) information </h3>
                 <p>Due to the COVID-19 pandemic some Chesham Museum events may be cancelled until further notice.</p>
-            </div>
+            </div> -->
 
             <?php if(have_posts()) : while(have_posts()): the_post();
 

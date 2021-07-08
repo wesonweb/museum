@@ -22,12 +22,10 @@
 							) );
 						?>
 					</nav>
-
 					<!-- copyright info -->
 					<section class="legal-info">
 						<p><?php echo theme_copyright(); ?> Chesham museum | Registered Charity Number: 1172671 | <a href="https://cheshammuseum.org.uk/privacy-policy/" class="footer-link">view our privacy policy</a></p>
 					</section>
-
 				</div>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
