@@ -4,7 +4,7 @@ Theme URI: http://localhost/cheshammuseum
 Author: wes
 Author URI: http://wesleymehaffy.co.uk
 Description: Chesham Museum website theme
-Version: 2.5.3
+Version: 2.5.5
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
@@ -1119,7 +1119,7 @@ button[aria-expanded="true"] {
 
 @media (min-width: 987px) {
   .welcome-message {
-    bottom: 0;
+    bottom: 25%;
     left: 0;
   }
 
@@ -1326,6 +1326,13 @@ span.publish-date {
   border-bottom: none;
 }
 
+.temp-closure {
+  max-width: 800px;
+  margin: auto;
+  border: none;
+  background-color: #fff;
+}
+
 @media (min-width: 450px) {
   .latest-news-article {
     /* width: 90%; */
@@ -1391,12 +1398,15 @@ span.publish-date {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto 3rem;
   }
 
   .news__item div {
     -ms-flex-preferred-size: 48%;
     flex-basis: 48%;
     flex-grow: 1;
+    margin-right: 2rem;
   }
 
   .news__item img {

@@ -13,7 +13,6 @@
         
         while ($newsarticles->have_posts() ):
         $newsarticles->the_post(); ?>
-
         <div class="latest-post-meta">
           <div class="latest-post-meta__image">
             <?php the_post_thumbnail(); ?>
@@ -27,7 +26,4 @@
         <?php endwhile; ?>
         <?php wp_reset_query(); ?>
   </section>
-  <div class="">
-						<?php the_field('homepage_temp_message'); ?>
-					</div>
 </div><!-- end .latest-news-article-->

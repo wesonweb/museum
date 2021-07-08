@@ -1,17 +1,11 @@
 <?php /* Template Name: Homepage template */ ?>
 <?php get_header(); ?>
-<section class="homepage-intro">
-			<div class="welcome-message container">
-				<h2>Welcome to Chesham Museum</h2>
-			</div>
-		</section>
+	<section class="homepage-intro">
+		<div class="welcome-message container">
+			<h2>Welcome to Chesham Museum</h2>
+		</div>
+	</section>
 	<main id="main" class="" role="main">
-		<!-- <section class="homepage-intro">
-			<div class="welcome-message container">
-				<h2>Welcome to Chesham Museum</h2>
-			</div>
-		</section> -->
-		<!-- opening times -->
 		<section class="home__latest-news">
 			<div class="home__latest-news-text">
 				<?php if(get_field('latest_news')) : ?>
@@ -30,8 +24,12 @@
 						<?php endif; ?>
 				<?php endif; ?>
 			</div>
-			
 		</section>
+		
+		<section class="latest-news-container">
+			<?php get_template_part('template-parts/news'); ?>
+		</section><!-- .news-wrapper-->
+
 		<ul class="homepage-features features-container">
 			<li class="homepage-asset-container">
 				<a href="<?php echo get_permalink(11); ?>">
@@ -44,7 +42,7 @@
 						</div>
 					</div>
 				</a>
-						</li>
+			</li>
 
 			<li class="homepage-asset-container">
 				<a href="<?php echo get_permalink(582); ?>">
@@ -57,7 +55,7 @@
 						</div>
 					</div>
 				</a>
-						</li>
+			</li>
 
 			<li class="homepage-asset-container">
 				<a href="<?php echo get_permalink(30); ?>">
@@ -69,7 +67,7 @@
 							</div>
 						</div>
 				</a>
-						</li>
+			</li>
 
 			<li class="homepage-asset-container">
 				<a href="<?php echo get_permalink(893); ?>">
@@ -83,13 +81,12 @@
 						</div>
 					</div>
 				</a>
-						</li>
-
-
+			</li>
 	</div> <!-- end homepage features -->
 	<?php get_template_part('template-parts/opening', 'times'); ?>
-		<section class="latest-news-container">
-			<?php get_template_part('template-parts/news'); ?>
-		</section><!-- .news-wrapper-->
+		
+		<div class="temp-closure">
+			<?php the_field('homepage_temp_message'); ?>
+		</div>
 	</main><!-- .site-main -->
 <?php get_footer(); ?>
