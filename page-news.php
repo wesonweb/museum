@@ -20,7 +20,7 @@
 			<?php	//if (have_posts()) : while (have_posts()) : the_post(); ?>	
 				<ul class="news__listing">
 				<?php if( have_posts()) : while( have_posts()) : the_post(); ?>
-					<li class="news__item"><div class="news__meta"><h3><?php the_title(); ?></h3><a href="<?php the_permalink();?>">Read more</a></div><?php the_post_thumbnail();?>
+					<li class="news__item"><div class="news__meta"><h3><?php the_title(); ?></h3><?php the_excerpt(); ?><a href="<?php the_permalink();?>" class="button">Read more</a></div><?php the_post_thumbnail();?>
 					</li>
 					<?php endwhile; ?>
 				</ul>

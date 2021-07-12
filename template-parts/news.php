@@ -20,7 +20,7 @@
           <div>
             <h2><span class="news-headline"><?php the_title(); ?></span></h2>
             <p><?php the_excerpt(); ?></p>
-            <p><span class="readmore"><a href="<?php the_permalink(); ?>">Read more &rarr;</a></span></p>
+            <p><a href="<?php the_permalink(); ?>" class="button">Read more &rarr;</a></p>
           </div>
         </div>
         <?php endwhile; ?>
